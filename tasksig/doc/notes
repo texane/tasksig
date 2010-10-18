@@ -1,3 +1,7 @@
+. todo
+ . lhs / rhs expression in assignement
+  . should produce a symref list given the current list
+
 . task api
  . gen_prolog
  . gen_epilog
