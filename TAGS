@@ -1,0 +1,2778 @@
+
+test-parsing.c,54
+static void clean_up_symbols(26,546
+int main(35,703
+
+lib.c,4047
+int verbose,31,573
+int verbose, optimize,31,573
+int verbose, optimize, optimize_size,31,573
+int verbose, optimize, optimize_size, preprocessing;31,573
+int die_if_error 32,626
+# define __GNUC__ 35,666
+# define __GNUC_MINOR__ 36,686
+# define __GNUC_PATCHLEVEL__ 37,713
+int gcc_major 40,752
+int gcc_minor 41,778
+int gcc_patchlevel 42,810
+static const char *gcc_base_dir gcc_base_dir44,853
+struct token *skip_to(skip_to46,898
+struct token *expect(expect53,1043
+unsigned int hexval(69,1461
+static void do_warn(86,1702
+static int max_warnings 98,1990
+static int show_info 99,2021
+void info(101,2048
+void warning(112,2217
+static void do_error(131,2499
+void sparse_error(151,2878
+void expression_error(159,3024
+void error_die(168,3210
+void die(177,3373
+static struct token *pre_buffer_begin pre_buffer_begin190,3580
+static struct token *pre_buffer_end pre_buffer_end191,3626
+int Waddress_space 193,3671
+int Wbitwise 194,3695
+int Wcast_to_as 195,3713
+int Wcast_truncate 196,3734
+int Wcontext 197,3758
+int Wdecl 198,3776
+int Wdefault_bitfield_sign 199,3791
+int Wdesignated_init 200,3823
+int Wdo_while 201,3849
+int Wenum_mismatch 202,3868
+int Wnon_pointer_null 203,3892
+int Wold_initializer 204,3919
+int Wone_bit_signed_bitfield 205,3945
+int Wparen_string 206,3979
+int Wptr_subtraction_blows 207,4002
+int Wreturn_void 208,4034
+int Wshadow 209,4056
+int Wtransparent_union 210,4073
+int Wtypesign 211,4101
+int Wundef 212,4120
+int Wuninitialized 213,4136
+int Wdeclarationafterstatement 214,4160
+int dbg_entry 216,4198
+int dbg_dead 217,4217
+int preprocess_only;219,4236
+static enum { STANDARD_C89,221,4258
+              STANDARD_C94,222,4286
+              STANDARD_C99,223,4314
+              STANDARD_GNU89,224,4342
+              STANDARD_GNU99,225,4372
+              STANDARD_GNU99, } standard 225,4372
+#define CMDLINE_INCLUDE 227,4432
+int cmdline_include_nr 228,4459
+struct cmdline_include cmdline_include[cmdline_include229,4487
+void add_pre_buffer(232,4546
+static char **handle_switch_D(handle_switch_D250,4942
+static char **handle_switch_E(handle_switch_E273,5346
+static char **handle_switch_I(handle_switch_I280,5463
+static void add_cmdline_include(300,5822
+static char **handle_switch_i(handle_switch_i314,6182
+static char **handle_switch_M(handle_switch_M334,6774
+static char **handle_switch_m(handle_switch_m344,7000
+static char **handle_switch_o(handle_switch_o360,7365
+static const struct warning 371,7559
+} warnings[warnings374,7620
+	WARNING_OFF,400,8502
+	WARNING_ON,401,8516
+	WARNING_FORCE_OFF402,8529
+static char **handle_onoff_switch(handle_onoff_switch406,8553
+static char **handle_switch_W(handle_switch_W438,9168
+static struct warning debugs[debugs448,9372
+static char **handle_switch_v(handle_switch_v454,9460
+static void handle_onoff_switch_finalize(468,9704
+static void handle_switch_W_finalize(478,9916
+static void handle_switch_v_finalize(505,10423
+static char **handle_switch_U(handle_switch_U510,10546
+static char **handle_switch_O(handle_switch_O517,10687
+static char **handle_switch_ftabstop(handle_switch_ftabstop527,10888
+static char **handle_switch_f(handle_switch_f543,11206
+static char **handle_switch_G(handle_switch_G562,11548
+static char **handle_switch_a(handle_switch_a570,11729
+static char **handle_switch_s(handle_switch_s578,11858
+static char **handle_nostdinc(handle_nostdinc610,12515
+static char **handle_base_dir(handle_base_dir616,12620
+struct switches 624,12790
+static char **handle_switch(handle_switch629,12863
+void declare_builtin_functions(672,13995
+void create_builtin_stream(756,19410
+static struct symbol_list *sparse_tokenstream(sparse_tokenstream835,22565
+static struct symbol_list *sparse_file(sparse_file867,23282
+static struct symbol_list *sparse_initial(sparse_initial896,23952
+struct symbol_list *sparse_initialize(sparse_initialize914,24425
+struct symbol_list * sparse_keep_tokens(958,25302
+struct symbol_list * __sparse(973,25546
+struct symbol_list * sparse(986,25770
+
+ast-view.c,50
+create_view_and_model 7,82
+treeview_main 30,639
+
+inline.c,775
+static struct expression * dup_expression(20,351
+static struct statement * dup_statement(27,518
+static struct symbol *copy_symbol(copy_symbol34,680
+static struct symbol_list *copy_symbol_list(copy_symbol_list47,1009
+static struct expression * copy_expression(59,1285
+static struct expression_list *copy_asm_constraints(copy_asm_constraints264,6441
+static void set_replace(286,6907
+static void unset_replace(292,7018
+static void unset_replace_list(303,7243
+static struct statement *copy_one_statement(copy_one_statement311,7401
+void copy_statement(454,11900
+static struct symbol *create_copy_symbol(create_copy_symbol466,12237
+static struct symbol_list *create_symbol_list(create_symbol_list480,12510
+int inline_function(492,12785
+void uninline(554,14196
+
+pre-process.c,3680
+static int false_nesting 31,625
+#define INCLUDEPATHS 33,656
+const char *includepath[includepath34,681
+static const char **quote_includepath quote_includepath41,780
+static const char **angle_includepath angle_includepath42,833
+static const char **isys_includepath isys_includepath43,890
+static const char **sys_includepath sys_includepath44,948
+static const char **dirafter_includepath dirafter_includepath45,1005
+#define dirty_stream(47,1066
+#define end_group(56,1246
+#define nesting_error(67,1507
+static struct token *alloc_token(alloc_token74,1642
+static void replace_with_string(90,2032
+static void replace_with_integer(101,2282
+static struct symbol *lookup_macro(lookup_macro109,2474
+static int token_defined(117,2667
+static void replace_with_defined(132,2960
+static int expand_one_symbol(141,3171
+static inline struct token *scan_next(scan_next174,4038
+static void expand_list(187,4328
+static struct token *collect_arg(collect_arg198,4613
+struct arg 247,5760
+static int collect_arguments(256,5884
+static struct token *dup_list(dup_list328,7703
+static struct token *stringify(stringify343,7975
+static void expand_arguments(359,8375
+static enum token_type combine(393,9291
+static int merge(440,10277
+static struct token *dup_token(dup_token475,11063
+static struct token **copy(copy486,11427
+static struct token **substitute(substitute505,11886
+	enum {Normal,Normal511,12099
+	enum {Normal, Placeholder,511,12099
+	enum {Normal, Placeholder, Concat}Concat511,12099
+static int expand(602,14248
+static const char *token_name_sequence(token_name_sequence633,14901
+static int already_tokenized(656,15474
+static void set_stream_include_path(714,17641
+static int try_include(733,18038
+static int do_include_path(758,18659
+static void do_include(770,18933
+static int free_preprocessor_line(795,19642
+static int handle_include_path(805,19834
+static int handle_include(828,20365
+static int handle_include_next(833,20517
+static int token_different(838,20687
+static int token_list_different(889,21701
+static inline void set_arg_count(903,21963
+static struct token *parse_arguments(parse_arguments910,22150
+static int try_arg(1009,24171
+static struct token *parse_expansion(parse_expansion1045,24923
+static int do_handle_define(1108,26675
+static int handle_define(1183,28423
+static int handle_weak_define(1188,28582
+static int handle_strong_define(1193,28744
+static int do_handle_undef(1198,28910
+static int handle_undef(1229,29627
+static int handle_strong_undef(1234,29784
+static int preprocessor_if(1239,29948
+static int handle_ifdef(1250,30258
+static int handle_ifndef(1265,30647
+static int expression_value(1294,31404
+static int handle_if(1352,32582
+static int handle_elif(1362,32823
+static int handle_else(1395,33534
+static int handle_endif(1420,34085
+static const char *show_token_sequence(show_token_sequence1436,34458
+static int handle_warning(1464,35015
+static int handle_error(1470,35184
+static int handle_nostdinc(1476,35356
+static inline void update_inc_ptrs(1486,35566
+static void add_path_entry(1519,36401
+static int handle_add_include(1553,37004
+static int handle_add_isystem(1567,37352
+static int handle_add_system(1581,37704
+static void add_dirafter_entry(1596,38118
+static int handle_add_dirafter(1612,38430
+static int handle_split_include(1626,38769
+static int handle_pragma(1657,39951
+static int handle_line(1673,40264
+static int handle_nondirective(1678,40368
+static void init_preprocessor(1685,40575
+static void handle_preprocessor_line(1736,42138
+static void preprocessor_line(1771,42928
+static void do_preprocess(1787,43252
+struct token * preprocess(1833,44261
+
+linearize.c,3970
+struct pseudo void_pseudo 36,1254
+static struct position current_pos;38,1287
+static struct instruction *alloc_instruction(alloc_instruction42,1364
+static inline int type_size(51,1573
+static struct instruction *alloc_typed_instruction(alloc_typed_instruction56,1687
+static struct entrypoint *alloc_entrypoint(alloc_entrypoint63,1882
+static struct basic_block *alloc_basic_block(alloc_basic_block68,1967
+static struct multijmp *alloc_multijmp(alloc_multijmp77,2172
+static inline int regno(86,2408
+const char *show_pseudo(show_pseudo94,2534
+static const char *opcodes[opcodes161,3968
+static char *show_asm_constraints(show_asm_constraints249,5707
+static char *show_asm(show_asm264,6146
+const char *show_instruction(show_instruction275,6512
+void show_bb(472,11994
+static void show_symbol_usage(529,13515
+void show_entry(540,13722
+static void bind_label(576,14505
+static struct basic_block * get_bound_block(583,14717
+static void finish_block(594,14950
+static void add_goto(601,15087
+static void add_one_insn(615,15440
+static void set_activeblock(625,15644
+static void remove_parent(635,15843
+void insert_branch(643,16057
+void insert_select(669,16655
+static inline int bb_empty(695,17318
+static struct basic_block * add_label(701,17467
+static void add_branch(718,17823
+pseudo_t alloc_pseudo(737,18384
+static void clear_symbol_pseudos(747,18585
+static pseudo_t symbol_pseudo(756,18762
+pseudo_t value_pseudo(777,19187
+#define MAX_VAL_HASH 779,19226
+static pseudo_t argument_pseudo(799,19680
+pseudo_t alloc_phi(813,20002
+struct access_data 835,20564
+static void finish_address_gen(845,20903
+static int linearize_simple_address(849,20986
+static struct symbol *base_type(base_type870,21521
+static int linearize_address_gen(883,21764
+static pseudo_t add_load(904,22326
+static void add_store(924,22734
+static pseudo_t linearize_store_gen(937,23121
+static pseudo_t add_binary_op(959,23753
+static pseudo_t add_setval(970,24117
+static pseudo_t add_symbol_address(980,24411
+static pseudo_t linearize_load_gen(991,24733
+static pseudo_t linearize_access(1004,25038
+static pseudo_t linearize_inc_dec(1017,25336
+static pseudo_t add_uniop(1034,25843
+static pseudo_t linearize_slice(1045,26147
+static pseudo_t linearize_regular_preop(1059,26554
+static pseudo_t linearize_preop(1077,26992
+static pseudo_t linearize_postop(1091,27449
+static struct instruction *alloc_cast_instruction(alloc_cast_instruction1102,27777
+static pseudo_t cast_pseudo(1121,28275
+static int opcode_sign(1141,28756
+static pseudo_t linearize_assignment(1152,28985
+static pseudo_t linearize_call_expression(1192,30338
+static pseudo_t linearize_binop(1262,31949
+static pseudo_t linearize_select(1288,32887
+static pseudo_t add_join_conditional(1310,33487
+static pseudo_t linearize_short_conditional(1329,34028
+static pseudo_t linearize_conditional(1355,34808
+static pseudo_t linearize_logical(1386,35762
+static pseudo_t linearize_compare(1397,36181
+pseudo_t linearize_cond_branch(1418,36822
+static pseudo_t linearize_logical_branch(1461,37737
+static pseudo_t linearize_cast(1474,38211
+static pseudo_t linearize_position(1486,38484
+static pseudo_t linearize_initializer(1496,38811
+static void linearize_argument(1521,39447
+pseudo_t linearize_expression(1532,39741
+static pseudo_t linearize_one_symbol(1606,41479
+static pseudo_t linearize_compound_statement(1625,41978
+static pseudo_t linearize_inlined_call(1654,42634
+static pseudo_t linearize_context(1680,43388
+static pseudo_t linearize_range(1695,43755
+static void add_asm_input(1709,44254
+static void add_asm_output(1721,44664
+static pseudo_t linearize_asm_statement(1739,45239
+static int multijmp_cmp(1808,46669
+static void sort_switch_cases(1829,47075
+static pseudo_t linearize_declaration(1834,47204
+pseudo_t linearize_statement(1846,47481
+static struct entrypoint *linearize_fn(linearize_fn2099,54207
+struct entrypoint *linearize_symbol(linearize_symbol2188,56121
+
+compat-solaris.c,33
+long double string_to_ld(10,138
+
+c2xml.c,633
+static xmlDocPtr doc 24,418
+static xmlNodePtr root_node 25,476
+static int idcount 26,535
+static xmlAttrPtr newProp(30,626
+static xmlAttrPtr newNumProp(35,768
+static xmlAttrPtr newIdProp(42,932
+static xmlNodePtr new_sym_node(49,1099
+static inline void examine_members(84,1949
+static void examine_modifiers(93,2136
+examine_layout(142,2886
+static void examine_symbol(154,3197
+static struct position *get_expansion_end get_expansion_end205,4425
+static void examine_macro(219,4669
+static void examine_namespace(234,4981
+static int get_stream_id 261,5453
+static inline void examine_symbol_list(271,5614
+int main(284,5901
+
+cse.c,703
+#define INSN_HASH_SIZE 20,354
+static struct instruction_list *insn_hash_table[insn_hash_table21,381
+int repeat_phase;23,447
+static int phi_compare(25,466
+static void clean_up_one_instruction(38,767
+static void clean_up_insns(126,2643
+static int phi_list_compare(139,2944
+static int insn_compare(168,3571
+static void sort_instruction_list(245,5298
+static struct instruction * cse_one_instruction(250,5422
+static int bb_dominates(262,5695
+static struct basic_block *trivial_common_parent(trivial_common_parent281,6197
+static inline void remove_instruction(295,6559
+static void add_instruction_to_end(300,6734
+static struct instruction * try_to_cse(308,6973
+void cleanup_and_cse(358,8300
+
+compat-bsd.c,33
+long double string_to_ld(17,236
+
+simplify.c,1427
+static struct basic_block *phi_parent(phi_parent15,256
+static void clear_phi(28,681
+static int if_convert_phi(38,860
+static int clean_up_phi(116,2727
+static int delete_pseudo_user_list_entry(149,3320
+static inline void remove_usage(166,3677
+void kill_use(175,3868
+void kill_instruction(184,3982
+static int dead_insn(232,4841
+static inline int constant(247,5161
+static int replace_with_pseudo(252,5246
+static unsigned int value_size(259,5406
+static unsigned int operand_size(279,5784
+static int simplify_asr(299,6291
+static int simplify_constant_rightside(312,6641
+static int simplify_constant_leftside(348,7376
+static int simplify_constant_binop(369,7797
+static int simplify_binop(486,9678
+static void switch_pseudo(500,10036
+static int canonical_order(510,10290
+static int simplify_commutative_binop(522,10548
+static inline int simple_pseudo(531,10756
+static int simplify_associative_binop(536,10876
+static int simplify_constant_unop(558,11381
+static int simplify_unop(580,11755
+static int simplify_one_memop(589,11956
+static int simplify_memop(633,12939
+static long long get_cast_value(645,13133
+static int simplify_cast(658,13416
+static int simplify_select(707,14505
+static int is_in_range(746,15402
+static int simplify_range(759,15621
+static int simplify_cond_branch(778,15990
+static int simplify_branch(791,16358
+static int simplify_switch(861,18318
+int simplify_instruction(886,18832
+
+dissect.c,1372
+#define	U_VOID	11,158
+#define	U_SELF	12,179
+#define	U_MASK	13,215
+#define	DO_LIST(15,261
+#define	DO_2_LIST(23,425
+typedef unsigned usage_t;36,727
+static struct reporter *reporter;reporter38,754
+static struct symbol *return_type;return_type39,788
+static inline int is_ptr(49,1105
+static inline usage_t u_rval(54,1214
+static inline usage_t u_addr(60,1326
+static usage_t u_lval(66,1439
+static usage_t fix_mode(73,1621
+static inline struct symbol *no_member(no_member105,2204
+static struct symbol *report_member(report_member117,2391
+static void report_implicit(128,2656
+static inline struct symbol *expr_symbol(expr_symbol143,3004
+static struct symbol *report_symbol(report_symbol163,3412
+static inline struct ident *mk_name(mk_name177,3766
+static void examine_sym_node(188,4038
+static struct symbol *base_type(base_type230,4928
+static struct symbol *__lookup_member(__lookup_member242,5143
+static struct symbol *lookup_member(lookup_member269,5652
+static struct expression *peek_preop(peek_preop275,5809
+static struct symbol *do_expression(do_expression291,6070
+static void do_asm_xputs(423,9354
+static struct symbol *do_statement(do_statement432,9527
+static struct symbol *do_initializer(do_initializer499,11287
+static inline struct symbol *do_symbol(do_symbol541,12316
+static void do_sym_list(569,12872
+void dissect(574,12964
+
+ast-inspect.c,411
+static inline void inspect_ptr_list(8,109
+static const char *statement_type_name(statement_type_name22,484
+void inspect_statement(43,1127
+void inspect_statement_list(81,2488
+static const char *symbol_type_name(symbol_type_name87,2599
+void inspect_symbol(114,3337
+void inspect_symbol_list(131,3775
+static const char *expression_type_name(expression_type_name137,3877
+void inspect_expression(174,5099
+
+storage.c,767
+#define MAX_STORAGE_HASH 21,495
+static struct storage_hash_list *storage_hash_table[storage_hash_table22,523
+static inline unsigned int storage_hash(24,595
+static int hash_list_cmp(31,840
+static void sort_hash_list(40,1055
+struct storage_hash_list *gather_storage(gather_storage45,1175
+static void name_storage(72,1835
+struct storage *lookup_storage(lookup_storage88,2150
+void add_storage(100,2530
+static int storage_hash_cmp(113,2880
+static void vrfy_storage(131,3353
+void free_storage(160,4107
+const char *show_storage(show_storage170,4271
+static struct storage * combine_storage(198,4855
+static void set_up_bb_storage(215,5236
+static void set_up_argument_storage(248,6077
+static void combine_phi_storage(269,6630
+void set_up_storage(293,7244
+
+memops.c,254
+static int find_dominating_parents(19,292
+static int address_taken(67,1586
+static int local_pseudo(78,1854
+static void simplify_loads(85,2031
+static void kill_store(141,3469
+static void kill_dominated_stores(150,3611
+void simplify_memops(185,4425
+
+test-unssa.c,137
+static void output_bb(10,127
+static void output_fn(27,437
+static int output_data(49,902
+static int compile(58,1114
+int main(75,1384
+
+compile.c,54
+static void clean_up_symbols(28,542
+int main(38,723
+
+compat-linux.c,24
+#define _GNU_SOURCE1,0
+
+liveness.c,855
+static void phi_defines(15,239
+static void asm_liveness(34,708
+static void track_instruction_usage(49,1176
+	#define USES(55,1419
+	#define DEFINES(56,1460
+int pseudo_in_list(162,3198
+static int liveness_changed;172,3380
+static void add_pseudo_exclusive(174,3410
+static inline int trackable_pseudo(182,3586
+static void insn_uses(187,3721
+static void insn_defines(196,4013
+static void track_bb_liveness(202,4180
+void clear_liveness(220,4607
+void track_pseudo_liveness(234,4887
+static void merge_pseudo_list(274,5896
+void track_phi_uses(282,6097
+static void track_bb_phi_uses(295,6394
+static struct pseudo_list **live_list;live_list304,6607
+static struct pseudo_list *dead_list;dead_list305,6646
+static void death_def(307,6685
+static void death_use(311,6779
+static void track_pseudo_death_bb(319,7015
+void track_pseudo_death(351,7829
+
+flow.c,1452
+unsigned long bb_generation;21,348
+static int rewrite_branch(28,544
+static int pseudo_truth_value(49,1040
+static int bb_depends_on(71,1472
+static int try_to_simplify_bb(93,2103
+static int bb_has_side_effects(128,2970
+static int simplify_phi_branch(152,3410
+static int simplify_branch_branch(167,3749
+static int simplify_one_branch(203,4746
+static int simplify_branch_nodes(211,4992
+int simplify_flow(229,5408
+static inline void concat_user_list(234,5489
+void convert_instruction_target(239,5658
+void convert_load_instruction(259,6118
+static int overlapping_memop(267,6310
+static inline int same_memop(281,6658
+int dominates(292,6921
+static int find_dominating_parents(319,7564
+void rewrite_load_instruction(374,8996
+static int find_dominating_stores(408,9821
+static void kill_store(479,11345
+static void kill_dead_stores(489,11540
+static void kill_dominated_stores(533,12583
+void check_access(580,13655
+static void simplify_one_symbol(596,14130
+void simplify_symbol_usage(714,16946
+static void mark_bb_reachable(723,17127
+static void kill_defs(735,17421
+void kill_bb(747,17624
+void kill_unreachable_bbs(774,18263
+static int rewrite_parent_branch(791,18652
+static struct basic_block * rewrite_branch_bb(822,19376
+static void vrfy_bb_in_list(846,19995
+static void vrfy_parents(860,20260
+static void vrfy_children(868,20438
+static void vrfy_bb_flow(898,21074
+void vrfy_flow(904,21167
+void pack_basic_blocks(917,21407
+
+evaluate.c,5310
+struct symbol *current_fn;current_fn29,528
+static struct symbol *evaluate_symbol_expression(evaluate_symbol_expression34,675
+static struct symbol *evaluate_string(evaluate_string66,1511
+static inline struct symbol *integer_promotion(integer_promotion102,2586
+static struct symbol *bigger_int_type(bigger_int_type147,3935
+static int same_cast_type(176,4500
+static struct symbol *base_type(base_type181,4652
+static int is_same_type(200,5014
+warn_for_different_enum_types 238,5887
+static struct expression * cast_to(266,6645
+	TYPE_NUM 317,7761
+	TYPE_BITFIELD 318,7776
+	TYPE_RESTRICT 319,7796
+	TYPE_FLOAT 320,7816
+	TYPE_PTR 321,7833
+	TYPE_COMPOUND 322,7849
+	TYPE_FOULED 323,7870
+	TYPE_FN 324,7889
+static inline int classify_type(327,7909
+#define is_int(360,8873
+static inline int is_string_type(362,8944
+static struct symbol *bad_expr_type(bad_expr_type369,9136
+static int restricted_value(390,9728
+static int restricted_binop(399,9887
+static int restricted_unop(420,10280
+static inline struct symbol *unfoul(unfoul432,10510
+static struct symbol *restricted_binop_type(restricted_binop_type437,10603
+static inline void unrestrict(482,11537
+static struct symbol *usual_conversions(usual_conversions494,11869
+static inline int lvalue_expression(536,12794
+static struct symbol *evaluate_ptr_add(evaluate_ptr_add541,12913
+#define MOD_IGN 609,14555
+const char *type_difference(type_difference611,14599
+static void bad_null(769,18332
+static unsigned long target_qualifiers(775,18468
+static struct symbol *evaluate_ptr_sub(evaluate_ptr_sub783,18683
+#define is_safe_type(835,20062
+static struct symbol *evaluate_conditional(evaluate_conditional837,20127
+static struct symbol *evaluate_logical(evaluate_logical856,20547
+static struct symbol *evaluate_binop(evaluate_binop871,20892
+static struct symbol *evaluate_comma(evaluate_comma945,23049
+static int modify_for_unsigned(954,23294
+static inline int is_null_pointer_constant(967,23559
+static struct symbol *evaluate_compare(evaluate_compare976,23755
+static struct symbol *evaluate_conditional_expression(evaluate_conditional_expression1078,26632
+static int compatible_float_op(1207,29867
+static int evaluate_assign_op(1215,30035
+static int whitelist_pointers(1270,31639
+static int compatible_assignment_types(1291,32152
+static void mark_assigned(1379,34379
+static void evaluate_assign_to(1412,34927
+static struct symbol *evaluate_assignment(evaluate_assignment1421,35192
+static void examine_fn_arguments(1448,35732
+static struct symbol *convert_to_as_mod(convert_to_as_mod1483,36541
+static struct symbol *create_pointer(create_pointer1497,36951
+static struct symbol *degenerate(degenerate1530,38001
+static struct symbol *evaluate_addressof(evaluate_addressof1608,40007
+static struct symbol *evaluate_dereference(evaluate_dereference1639,40701
+static struct symbol *evaluate_postop(evaluate_postop1695,41961
+static struct symbol *evaluate_sign(evaluate_sign1729,42792
+static struct symbol *evaluate_preop(evaluate_preop1755,43588
+static struct symbol *find_identifier(find_identifier1810,44778
+static struct expression *evaluate_offset(evaluate_offset1844,45600
+static struct symbol *evaluate_member_dereference(evaluate_member_dereference1873,46439
+static int is_promoted(1957,48558
+static struct symbol *evaluate_type_information(evaluate_type_information1989,49047
+static struct symbol *evaluate_sizeof(evaluate_sizeof2015,49680
+static struct symbol *evaluate_ptrsizeof(evaluate_ptrsizeof2046,50362
+static struct symbol *evaluate_alignof(evaluate_alignof2080,51022
+static int evaluate_arguments(2095,51316
+static struct symbol *find_struct_ident(find_struct_ident2141,52496
+static void convert_index(2152,52729
+static void convert_ident(2163,53018
+static void convert_designators(2173,53244
+static void excess(2186,53466
+static struct expression *first_subobject(first_subobject2194,53640
+static struct expression *check_designators(check_designators2229,54511
+static struct expression *next_designators(next_designators2294,56192
+static void handle_list_initializer(2359,57724
+static int is_string_literal(2443,59873
+static struct expression *handle_scalar(handle_scalar2463,60494
+static int handle_simple_initializer(2510,61933
+static void evaluate_initializer(2591,63665
+static struct symbol *evaluate_cast(evaluate_cast2599,63915
+static int evaluate_symbol_call(2736,67340
+static struct symbol *evaluate_call(evaluate_call2766,67901
+static struct symbol *evaluate_offsetof(evaluate_offsetof2819,69340
+struct symbol *evaluate_expression(evaluate_expression2907,71632
+static void check_duplicates(3005,74154
+static struct symbol *evaluate_symbol(evaluate_symbol3036,74987
+void evaluate_symbol_list(3076,75823
+static struct symbol *evaluate_return_expression(evaluate_return_expression3086,76004
+static void evaluate_if_statement(3111,76719
+static void evaluate_iterator(3121,76942
+static void verify_output_constraint(3131,77307
+static void verify_input_constraint(3142,77596
+static void evaluate_asm_statement(3151,77848
+static void evaluate_case_statement(3240,79886
+static void check_case_type(3247,80076
+static void evaluate_switch_statement(3295,81279
+struct symbol *evaluate_statement(evaluate_statement3316,81961
+
+tokenize.c,2595
+#define EOF 23,491
+int input_stream_nr 25,509
+struct stream *input_streams;input_streams26,534
+static int input_streams_allocated;27,564
+unsigned int tabstop 28,600
+#define BUFSIZE 30,627
+} stream_t;39,810
+const char *stream_name(stream_name41,823
+static struct position stream_pos(48,970
+const char *show_special(show_special61,1242
+const char *show_ident(show_ident72,1443
+static char *charstr(charstr81,1626
+const char *show_string(show_string104,2040
+const char *show_token(show_token123,2402
+int init_stream(182,3549
+static struct token * alloc_token(205,4204
+static int nextchar_slow(216,4451
+static inline int nextchar(299,6052
+struct token eof_token_entry;317,6409
+static struct token *mark_eof(mark_eof319,6440
+static void add_token(336,6778
+static void drop_token(346,6970
+	Letter 354,7148
+	Digit 355,7161
+	Hex 356,7173
+	Exp 357,7183
+	Dot 358,7193
+	ValidSecond 359,7204
+static const long cclass[cclass362,7227
+static int get_one_number(400,8135
+static int escapechar(445,9043
+static int get_char_token(532,10622
+static int get_string_token(552,11059
+static int drop_stream_eoln(592,11895
+static int drop_stream_comment(605,12084
+unsigned char combinations[combinations627,12513
+#define NR_COMBINATIONS 629,12569
+#define special_hash(632,12708
+static unsigned char hash_results[hash_results638,12914
+#define RES(639,12959
+#undef RES661,13538
+static int code[code663,13552
+#define CODE(664,13576
+#undef CODE686,14572
+static int get_one_special(689,14588
+#define IDENT_HASH_BITS 740,15671
+#define IDENT_HASH_SIZE 741,15700
+#define IDENT_HASH_MASK 742,15745
+#define ident_hash_init(744,15790
+#define ident_hash_add(745,15822
+#define ident_hash_end(746,15877
+static struct ident *hash_table[hash_table748,15967
+static int ident_hit,749,16017
+static int ident_hit, ident_miss,749,16017
+static int ident_hit, ident_miss, idents;749,16017
+void show_identifier_stats(751,16060
+static struct ident *alloc_ident(alloc_ident781,16598
+static struct ident * insert_hash(791,16818
+static struct ident *create_hashed_ident(create_hashed_ident799,16988
+static unsigned long hash_name(825,17471
+struct ident *hash_ident(hash_ident838,17751
+struct ident *built_in_ident(built_in_ident843,17866
+struct token *built_in_token(built_in_token849,18005
+static int get_one_identifier(860,18235
+static int get_one_token(900,19070
+static struct token *setup_stream(setup_stream910,19325
+static struct token *tokenize_stream(tokenize_stream933,19802
+struct token * tokenize_buffer(951,20182
+struct token * tokenize(961,20425
+
+test-lexing.c,17
+int main(21,436
+
+test-linearize.c,54
+static void clean_up_symbols(25,477
+int main(39,719
+
+example.c,4367
+static const char *opcodes[opcodes17,284
+static int last_reg,101,1935
+static int last_reg, stack_offset;101,1935
+struct hardreg 103,1971
+#define TAG_DEAD 111,2083
+#define TAG_DIRTY 112,2102
+#define SWITCH_REG 115,2174
+static struct hardreg hardregs[hardregs123,2346
+#define REGNO 134,2555
+#define REG_EBP 135,2571
+#define REG_ESP 136,2589
+struct bb_state 138,2608
+enum optype 149,2825
+	OP_UNDEF,150,2839
+	OP_REG,151,2850
+	OP_VAL,152,2859
+	OP_MEM,153,2868
+	OP_ADDR,154,2877
+struct operand 157,2891
+static const char *show_op(show_op173,3159
+static struct storage_hash *find_storage_hash(find_storage_hash215,3995
+static struct storage_hash *find_or_create_hash(find_or_create_hash225,4243
+static void FORMAT_ATTR(239,4611
+static void FORMAT_ATTR(248,4775
+static void FORMAT_ATTR(260,5031
+#define output_insn(272,5287
+static void FORMAT_ATTR(275,5390
+static const char *show_memop(show_memop289,5676
+static int alloc_stack_offset(310,6083
+static void alloc_stack(317,6194
+static int can_regenerate(330,6583
+static void flush_one_pseudo(350,6958
+static void flush_reg(386,7991
+static struct storage_hash *find_pseudo_storage(find_pseudo_storage406,8490
+static void mark_reg_dead(445,9465
+static void add_pseudo_reg(460,9844
+static struct hardreg *preferred_reg(preferred_reg466,10077
+static struct hardreg *empty_reg(empty_reg479,10378
+static struct hardreg *target_reg(target_reg491,10574
+static struct hardreg *find_in_reg(find_in_reg525,11193
+static void flush_pseudo(545,11620
+static void flush_cc_cache_to_reg(553,11803
+static void flush_cc_cache(562,12044
+static void add_cc_cache(578,12327
+static struct hardreg *fill_reg(fill_reg588,12614
+static struct hardreg *getreg(getreg645,14179
+static void move_reg(656,14434
+static struct hardreg *copy_reg(copy_reg661,14583
+static void put_operand(694,15424
+static struct operand *alloc_op(alloc_op712,15696
+static struct operand *get_register_operand(get_register_operand719,15823
+static int get_sym_frame_offset(728,16056
+static struct operand *get_generic_operand(get_generic_operand738,16255
+static const char *generic(generic800,17529
+static struct operand *get_address_operand(get_address_operand830,18260
+static const char *address(address851,18719
+static const char *reg_or_imm(reg_or_imm859,18936
+static void kill_dead_reg(869,19141
+static struct hardreg *target_copy_reg(target_copy_reg885,19431
+static void do_binop(891,19596
+static void generate_binop(905,20132
+static int is_dead_reg(911,20286
+static void generate_commutative_binop(926,20701
+static void mark_pseudo_dead(961,21573
+static void kill_dead_pseudos(975,21899
+static void generate_store(984,22032
+static void generate_load(989,22218
+static void kill_pseudo(999,22505
+static void generate_copy(1022,23044
+static void generate_cast(1029,23266
+static const char *conditional[conditional1060,24176
+static void generate_branch(1074,24423
+static void generate_switch(1098,25065
+static void generate_ret(1107,25342
+static void generate_call(1121,25718
+static void generate_select(1140,26271
+struct asm_arg 1161,26877
+static void replace_asm_arg(1168,26985
+static void replace_asm_percent(1177,27158
+static void replace_asm_named(1195,27467
+static const char *replace_asm_args(replace_asm_args1223,27971
+#define MAX_ASM_ARG 1253,28429
+static struct asm_arg asm_arguments[asm_arguments1254,28454
+static struct asm_arg *generate_asm_inputs(generate_asm_inputs1256,28505
+static struct asm_arg *generate_asm_outputs(generate_asm_outputs1298,29496
+static void generate_asm(1331,30270
+static void generate_compare(1345,30714
+static void generate_one_insn(1366,31199
+#define VERY_BUSY 1459,33001
+#define REG_FIXED 1460,33024
+static void write_reg_to_storage(1462,33048
+static void write_val_to_storage(1503,34000
+static void fill_output(1519,34409
+static int final_pseudo_flush(1579,35760
+static void generate_output_storage(1640,37243
+static void generate(1679,38223
+static void generate_list(1727,39714
+static void mark_used_registers(1744,40228
+static void output_bb(1762,40713
+static void set_up_arch_entry(1801,41662
+static void set_up_arch_exit(1849,42831
+static void set_up_arch_switch(1870,43392
+static void arch_set_up_storage(1882,43701
+static void output(1906,44167
+static int compile(1929,44631
+int main(1943,44870
+
+target.c,563
+struct symbol *size_t_ctype size_t_ctype6,61
+struct symbol *ssize_t_ctype ssize_t_ctype7,104
+int max_alignment 12,189
+int bits_in_bool 17,243
+int bits_in_char 18,265
+int bits_in_short 19,287
+int bits_in_int 20,311
+int bits_in_long 21,333
+int bits_in_longlong 22,356
+int bits_in_longlonglong 23,383
+int max_int_alignment 25,416
+int bits_in_float 30,480
+int bits_in_double 31,504
+int bits_in_longdouble 32,529
+int max_fp_alignment 34,559
+int bits_in_pointer 39,614
+int pointer_alignment 40,640
+int bits_in_enum 45,694
+int enum_alignment 46,717
+
+ctags.c,434
+static struct symbol_list *taglist taglist19,315
+#define MAX(23,408
+static int cmp_sym(25,456
+static void show_tag_header(42,981
+static inline void show_symbol_tag(52,1489
+static void show_tags(58,1696
+static inline void add_tag(88,2296
+static inline void examine_members(96,2436
+static void examine_symbol(106,2619
+static void examine_namespace(155,3557
+static inline void examine_symbol_list(186,4113
+int main(197,4306
+
+sparse.c,715
+static int context_increase(27,574
+static int imbalance(52,1062
+static int check_children(63,1419
+static int check_bb_context(81,1887
+static void check_cast_instruction(100,2379
+static void check_range_instruction(129,3040
+static void check_byte_count(134,3150
+static pseudo_t argument(148,3512
+static void check_memset(159,3780
+#define check_memcpy 164,3880
+#define check_ctu 165,3914
+#define check_cfu 166,3945
+struct checkfn 168,3977
+static void check_call_instruction(173,4059
+static void check_one_instruction(198,4615
+static void check_bb_instructions(216,4928
+static void check_instructions(226,5139
+static void check_context(234,5306
+static void check_symbols(258,6001
+int main(276,6288
+
+graph.c,82
+static void graph_ep(28,656
+static void graph_calls(102,2599
+int main(147,3876
+
+expression.c,1986
+static int match_oplist(30,567
+struct token *parens_expression(parens_expression46,850
+static int convert_one_fn_token(67,1523
+static int convert_function(89,1957
+static struct token *parse_type(parse_type116,2475
+static struct token *builtin_types_compatible_p_expr(builtin_types_compatible_p_expr130,2889
+static struct token *builtin_offsetof_expr(builtin_offsetof_expr157,3653
+static struct token *string_expression(string_expression223,5289
+#define ULLONG_MAX 268,6301
+static void get_number_value(271,6336
+struct token *primary_expression(primary_expression395,9166
+static struct token *expression_list(expression_list501,11935
+static struct token *postfix_expression(postfix_expression520,12392
+static struct token *type_info_expression(type_info_expression597,14594
+static struct token *unary_expression(unary_expression636,15788
+static struct token *cast_expression(cast_expression724,18318
+#define LR_BINOP_EXPRESSION(774,19871
+static struct token *multiplicative_expression(multiplicative_expression803,20723
+static struct token *additive_expression(additive_expression811,20936
+static struct token *shift_expression(shift_expression819,21138
+static struct token *relational_expression(relational_expression827,21360
+static struct token *equality_expression(equality_expression836,21605
+static struct token *bitwise_and_expression(bitwise_and_expression844,21828
+static struct token *bitwise_xor_expression(bitwise_xor_expression852,22012
+static struct token *bitwise_or_expression(bitwise_or_expression860,22199
+static struct token *logical_and_expression(logical_and_expression868,22385
+static struct token *logical_or_expression(logical_or_expression876,22589
+struct token *conditional_expression(conditional_expression884,22792
+struct token *assignment_expression(assignment_expression907,23528
+static struct token *comma_expression(comma_expression931,24316
+struct token *parse_expression(parse_expression939,24496
+
+test-sort.c,47
+int_cmp 7,90
+#define MIN(14,196
+main 17,248
+
+sort.c,348
+#undef PARANOIA19,277
+#undef COVERAGE20,293
+#define assert(25,352
+static unsigned char been_there[been_there29,394
+#define BEEN_THERE(30,432
+#define BEEN_THERE(38,598
+static void array_sort(46,876
+static void verify_seq_sorted 64,1193
+#define FLUSH_TO(96,1676
+#define DUMP_TO(105,1917
+merge_block_seqs 117,2277
+void sort_list(225,4456
+
+show-parse.c,1901
+static void do_debug_symbol(31,638
+void debug_symbol(86,2214
+const char *modifier_string(modifier_string95,2405
+	struct mod_name 100,2502
+static void show_struct_member(150,3752
+void show_symbol_list(156,3955
+struct type_name 168,4182
+static void FORMAT_ATTR(173,4231
+static void FORMAT_ATTR(187,4491
+static struct ctype_name 201,4746
+} typenames[typenames204,4813
+const char *builtin_typename(builtin_typename238,5832
+const char *builtin_ctypename(builtin_ctypename248,6031
+static void do_show_type(258,6242
+void show_type(388,8693
+const char *show_typename(show_typename399,8882
+void show_symbol(410,9082
+static int new_pseudo(468,10039
+static int new_label(474,10106
+static void show_switch_statement(480,10178
+static void show_symbol_decl(525,11339
+int show_statement(538,11584
+static int show_call_expression(691,15649
+static int show_comma(736,16720
+static int show_binop(742,16840
+static int show_slice(765,17404
+static int show_regular_preop(773,17621
+static int show_address_gen(795,18183
+static int show_load_gen(800,18278
+static void show_store_gen(808,18444
+static int show_assignment(814,18618
+static int show_return_stmt(829,18928
+static int show_initialization(844,19302
+static int show_access(860,19688
+static int show_inc_dec(866,19835
+static int show_preop(882,20291
+static int show_postop(896,20688
+static int show_symbol_expr(901,20773
+static int show_symbol_init(920,21389
+static int type_is_signed(935,21675
+static int show_cast_expr(944,21871
+static int show_value(968,22478
+static int show_fvalue(977,22682
+static int show_string_expr(986,22880
+static int show_label_expr(994,23061
+static int show_conditional_expr(1001,23233
+static int show_statement_expr(1012,23568
+static int show_position_expr(1017,23670
+static int show_initializer_expr(1031,24029
+int show_symbol_expr_init(1067,24947
+int show_expression(1080,25195
+
+scope.c,466
+static struct scope builtin_scope 20,338
+struct scope	*block_scope block_scope22,403
+void bind_scope(27,645
+static void start_scope(33,763
+void start_file_scope(41,918
+void start_symbol_scope(54,1213
+void start_function_scope(59,1276
+static void remove_symbol_scope(65,1372
+static void end_scope(74,1544
+void end_file_scope(87,1812
+void new_file_scope(92,1868
+void end_symbol_scope(99,1975
+void end_function_scope(104,2034
+int is_outer_scope(110,2124
+
+expand.c,2122
+#define SIDE_EFFECTS 30,550
+#define UNSAFE 31,615
+#define SELECT_COST 32,701
+#define BRANCH_COST 33,779
+static int conservative;37,939
+static int expand_symbol_expression(39,965
+static long long get_longlong(55,1420
+void cast_value(71,1811
+static int check_shift_count(141,3638
+#define CONVERT(152,3943
+#define SIGNED(153,3981
+#define UNSIGNED(154,4015
+static int simplify_int_binop(155,4051
+static int simplify_cmp_binop(273,6132
+static int simplify_float_binop(305,7177
+static int simplify_float_cmp(354,8417
+static int expand_binop(377,9052
+static int expand_logical(390,9317
+static int expand_comma(442,10493
+#define MOD_IGN 460,10964
+static int compare_types(462,11008
+static int expand_compare(483,11595
+static int expand_conditional(508,12190
+static int expand_assignment(541,12931
+static int expand_addressof(548,13077
+static struct expression *constant_symbol_value(constant_symbol_value560,13372
+static int expand_dereference(588,14008
+static int simplify_preop(644,15471
+static int simplify_float_preop(677,16140
+static int expand_postop(698,16498
+static int expand_preop(704,16607
+static int expand_arguments(735,17125
+static int expand_cast(746,17335
+int expand_constant_p(762,17750
+int expand_safe_p(771,17959
+static int expand_symbol_call(783,18192
+static int expand_call(797,18486
+static int expand_expression_list(815,18844
+static int expand_pos_expression(830,19169
+static unsigned long bit_offset(880,20292
+static int compare_expressions(892,20575
+static void sort_expression_list(902,20845
+static void verify_nonoverlapping(907,20973
+static int expand_expression(924,21364
+static void expand_const_expression(1015,23171
+int expand_symbol(1024,23403
+static void expand_return_expression(1044,23773
+static int expand_if_statement(1049,23877
+static int expand_compound(1090,24897
+static int expand_statement(1113,25315
+static inline int bad_integer_constant_expression(1184,26989
+static long long __get_expression_value(1193,27174
+long long get_expression_value(1227,27969
+long long const_expression_value(1232,28071
+int is_zero_constant(1237,28175
+
+compile-i386.c,6896
+struct textbuf 45,984
+struct loop_stack 52,1124
+struct function 64,1378
+enum storage_type 76,1618
+	STOR_PSEUDO,77,1638
+	STOR_ARG,78,1687
+	STOR_SYM,79,1722
+	STOR_REG,80,1779
+	STOR_VALUE,81,1813
+	STOR_LABEL,82,1849
+	STOR_LABELSYM,83,1888
+struct reg_info 86,1958
+#define own_regno 90,2056
+struct storage 93,2089
+	STOR_LABEL_VAL	132,2591
+	STOR_WANTS_FREE	133,2619
+struct symbol_private 136,2652
+enum atom_type 140,2703
+	ATOM_TEXT,141,2720
+	ATOM_INSN,142,2732
+	ATOM_CSTR,143,2744
+struct atom 146,2760
+static struct function *current_func current_func172,3135
+static struct textbuf *unit_post_text unit_post_text173,3180
+static const char *current_section;current_section174,3226
+static void emit_comment(176,3263
+enum registers 186,3787
+	NOREG,187,3804
+	 AL,188,3812
+	 AL,  DL,188,3812
+	 AL,  DL,  CL,188,3812
+	 AL,  DL,  CL,  BL,188,3812
+	 AL,  DL,  CL,  BL,  AH,188,3812
+	 AL,  DL,  CL,  BL,  AH,  DH,188,3812
+	 AL,  DL,  CL,  BL,  AH,  DH,  CH,188,3812
+	 AL,  DL,  CL,  BL,  AH,  DH,  CH,  BH,188,3812
+	 AX,189,3862
+	 AX,  DX,189,3862
+	 AX,  DX,  CX,189,3862
+	 AX,  DX,  CX,  BX,189,3862
+	 AX,  DX,  CX,  BX,  SI,189,3862
+	 AX,  DX,  CX,  BX,  SI,  DI,189,3862
+	 AX,  DX,  CX,  BX,  SI,  DI,  BP,189,3862
+	 AX,  DX,  CX,  BX,  SI,  DI,  BP,  SP,189,3862
+	EAX,190,3913
+	EAX, EDX,190,3913
+	EAX, EDX, ECX,190,3913
+	EAX, EDX, ECX, EBX,190,3913
+	EAX, EDX, ECX, EBX, ESI,190,3913
+	EAX, EDX, ECX, EBX, ESI, EDI,190,3913
+	EAX, EDX, ECX, EBX, ESI, EDI, EBP,190,3913
+	EAX, EDX, ECX, EBX, ESI, EDI, EBP, ESP,190,3913
+	EAX_EDX,191,3964
+	EAX_EDX, ECX_EBX,191,3964
+	EAX_EDX, ECX_EBX, ESI_EDI,191,3964
+#define byte_reg(195,4069
+#define highbyte_reg(196,4104
+#define word_reg(197,4141
+#define REGINFO(199,4174
+static struct reg_info reg_info_table[reg_info_table201,4268
+#define REGSTORAGE(231,5438
+static struct storage hardreg_storage_table[hardreg_storage_table233,5520
+#define REG_EAX 243,6036
+#define REG_ECX 244,6082
+#define REG_EDX 245,6128
+#define REG_ESP 246,6174
+#define REG_DL	247,6220
+#define REG_DX	248,6264
+#define REG_AL	249,6308
+#define REG_AX	250,6352
+static inline struct storage * reginfo_reg(254,6439
+static struct storage * get_hardreg(259,6559
+static void put_reg(281,7119
+struct regclass 291,7372
+static struct regclass regclass_8 296,7444
+static struct regclass regclass_16 297,7528
+static struct regclass regclass_32 298,7610
+static struct regclass regclass_64 299,7699
+static struct regclass regclass_32_8 301,7781
+static struct regclass *get_regclass_bits(get_regclass_bits303,7864
+static struct regclass *get_regclass(get_regclass313,8063
+static int register_busy(318,8180
+static struct storage *get_reg(get_reg335,8493
+static struct storage *get_reg_value(get_reg_value350,8824
+static struct storage *temp_from_bits(temp_from_bits370,9341
+static inline unsigned int pseudo_offset(375,9453
+static inline unsigned int arg_offset(383,9616
+static const char *pretty_offset(pretty_offset392,9849
+static void stor_sym_init(404,10024
+static const char *stor_op_name(stor_op_name420,10325
+static struct atom *new_atom(new_atom453,11005
+static inline void push_cstring(466,11211
+static inline void push_atom(478,11460
+static void push_text_atom(483,11569
+static struct storage *new_storage(new_storage493,11764
+static struct storage *stack_alloc(stack_alloc506,11963
+static struct storage *new_labelsym(new_labelsym526,12378
+static struct storage *new_val(new_val540,12589
+static int new_label(554,12788
+static void textbuf_push(560,12860
+static void textbuf_emit(588,13438
+static void insn(610,13762
+static void emit_comment(629,14162
+static void emit_label 644,14471
+static void emit_labelsym 657,14714
+void emit_unit_begin(670,14965
+void emit_unit_end(675,15053
+static void emit_section(682,15225
+static void emit_insn_atom(693,15417
+static void emit_atom_list(722,16087
+static void emit_string_list(744,16483
+static void func_cleanup(759,16796
+static void emit_func_pre(783,17339
+static void emit_func_post(832,18521
+static void emit_object_pre(885,19687
+static void emit_scalar(899,20127
+static void emit_global_noinit(926,20681
+static int ea_current,942,21115
+static int ea_current, ea_last;942,21115
+static void emit_initializer(944,21148
+static int sort_array_cmp(965,21638
+static void sort_array(979,21923
+static void emit_array(1037,23320
+void emit_one_symbol(1069,24061
+static void emit_copy(1074,24125
+static void emit_store(1101,24707
+static void emit_scalar_noinit(1108,24925
+static void emit_array_noinit(1116,25122
+static const char *opbits(opbits1124,25360
+static void emit_move(1142,25678
+static struct storage *emit_compare(emit_compare1217,27242
+static struct storage *emit_value(emit_value1273,28741
+static struct storage *emit_divide(emit_divide1295,29189
+static struct storage *emit_binop(emit_binop1330,29994
+static int emit_conditional_test(1426,31931
+static int emit_conditional_end(1450,32500
+static void emit_if_conditional(1473,33090
+static struct storage *emit_inc_dec(emit_inc_dec1495,33616
+static struct storage *emit_postop(emit_postop1518,34088
+static struct storage *emit_return_stmt(emit_return_stmt1523,34184
+static struct storage *emit_conditional_expr(emit_conditional_expr1543,34657
+static struct storage *emit_select_expr(emit_select_expr1571,35409
+static struct storage *emit_symbol_expr_init(emit_symbol_expr_init1600,36306
+static struct storage *emit_string_expr(emit_string_expr1623,36856
+static struct storage *emit_cast_expr(emit_cast_expr1637,37165
+static struct storage *emit_regular_preop(emit_regular_preop1660,37703
+static void emit_case_statement(1694,38508
+static void emit_switch_statement(1700,38647
+static void x86_struct_member(1782,40706
+static void x86_symbol(1788,40908
+static void x86_symbol_decl(1858,42123
+static void loopstk_push(1866,42280
+static void loopstk_pop(1878,42551
+static int loopstk_break(1889,42749
+static int loopstk_continue(1894,42836
+static void emit_loop(1899,42923
+static struct storage *x86_statement(x86_statement1979,45321
+static struct storage *x86_call_expression(x86_call_expression2053,47040
+static struct storage *x86_address_gen(x86_address_gen2125,48797
+static struct storage *x86_assignment(x86_assignment2148,49279
+static int x86_initialization(2181,49902
+static struct storage *x86_access(x86_access2198,50299
+static struct storage *x86_preop(x86_preop2203,50394
+static struct storage *x86_symbol_expr(x86_symbol_expr2217,50801
+static void x86_symbol_init(2233,51356
+static int type_is_signed(2254,51780
+static struct storage *x86_label_expr(x86_label_expr2263,51976
+static struct storage *x86_statement_expr(x86_statement_expr2270,52182
+static int x86_position_expr(2275,52294
+static void x86_initializer_expr(2286,52614
+static struct storage *x86_expression(x86_expression2314,53381
+
+compat/mmap-blob.c,88
+#define MAP_ANONYMOUS 9,173
+void *blob_alloc(blob_alloc16,312
+void blob_free(28,587
+
+compat/strtold.c,31
+long double string_to_ld(3,21
+
+parse.c,13152
+static struct symbol_list **function_symbol_list;function_symbol_list31,581
+struct symbol_list *function_computed_target_list;function_computed_target_list32,631
+struct statement_list *function_computed_goto_list;function_computed_goto_list33,682
+typedef struct token *declarator_t(declarator_t38,922
+	struct_specifier,40,1015
+	struct_specifier, union_specifier,40,1015
+	struct_specifier, union_specifier, enum_specifier,40,1015
+	attribute_specifier,41,1067
+	attribute_specifier, typeof_specifier,41,1067
+	attribute_specifier, typeof_specifier, parse_asm_declarator,41,1067
+	typedef_specifier,42,1129
+	typedef_specifier, inline_specifier,42,1129
+	typedef_specifier, inline_specifier, auto_specifier,42,1129
+	register_specifier,43,1183
+	register_specifier, static_specifier,43,1183
+	register_specifier, static_specifier, extern_specifier,43,1183
+	thread_specifier,44,1240
+	thread_specifier, const_qualifier,44,1240
+	thread_specifier, const_qualifier, volatile_qualifier;44,1240
+typedef struct token *attr_t(attr_t61,2542
+	attribute_packed,65,2649
+	attribute_packed, attribute_aligned,65,2649
+	attribute_packed, attribute_aligned, attribute_modifier,65,2649
+	attribute_address_space,66,2707
+	attribute_address_space, attribute_context,66,2707
+	attribute_designated_init,67,2752
+	attribute_transparent_union,68,2780
+	attribute_transparent_union, ignore_attribute,68,2780
+	attribute_mode,69,2828
+	attribute_mode, attribute_force;69,2828
+typedef struct symbol *to_mode_t(to_mode_t71,2863
+	to_QI_mode,74,2932
+	to_QI_mode, to_HI_mode,74,2932
+	to_QI_mode, to_HI_mode, to_SI_mode,74,2932
+	to_QI_mode, to_HI_mode, to_SI_mode, to_DI_mode,74,2932
+	to_QI_mode, to_HI_mode, to_SI_mode, to_DI_mode, to_TI_mode,74,2932
+	to_QI_mode, to_HI_mode, to_SI_mode, to_DI_mode, to_TI_mode, to_word_mode;74,2932
+	Set_T 77,3015
+	Set_S 78,3027
+	Set_Char 79,3039
+	Set_Int 80,3054
+	Set_Double 81,3068
+	Set_Float 82,3086
+	Set_Signed 83,3103
+	Set_Unsigned 84,3121
+	Set_Short 85,3142
+	Set_Long 86,3160
+	Set_Vlong 87,3177
+	Set_Any 88,3196
+	Set_Any = Set_T 88,3196
+	Set_Any = Set_T | Set_Short 88,3196
+	Set_Any = Set_T | Set_Short | Set_Long 88,3196
+	Set_Any = Set_T | Set_Short | Set_Long | Set_Signed 88,3196
+	Set_Any = Set_T | Set_Short | Set_Long | Set_Signed | Set_Unsigned88,3196
+	CInt 92,3275
+	CInt = 0, CSInt,92,3275
+	CInt = 0, CSInt, CUInt,92,3275
+	CInt = 0, CSInt, CUInt, CReal,92,3275
+	CInt = 0, CSInt, CUInt, CReal, CChar,92,3275
+	CInt = 0, CSInt, CUInt, CReal, CChar, CSChar,92,3275
+	CInt = 0, CSInt, CUInt, CReal, CChar, CSChar, CUChar92,3275
+	SNone 96,3340
+	SNone = 0, STypedef,96,3340
+	SNone = 0, STypedef, SAuto,96,3340
+	SNone = 0, STypedef, SAuto, SRegister,96,3340
+	SNone = 0, STypedef, SAuto, SRegister, SExtern,96,3340
+	SNone = 0, STypedef, SAuto, SRegister, SExtern, SStatic,96,3340
+	SNone = 0, STypedef, SAuto, SRegister, SExtern, SStatic, SForced96,3340
+static struct symbol_op typedef_op 99,3410
+static struct symbol_op inline_op 104,3509
+static struct symbol_op auto_op 109,3606
+static struct symbol_op register_op 114,3699
+static struct symbol_op static_op 119,3800
+static struct symbol_op extern_op 124,3897
+static struct symbol_op thread_op 129,3994
+static struct symbol_op const_op 134,4091
+static struct symbol_op volatile_op 139,4187
+static struct symbol_op restrict_op 144,4289
+static struct symbol_op typeof_op 148,4356
+static struct symbol_op attribute_op 155,4493
+static struct symbol_op struct_op 160,4597
+static struct symbol_op union_op 167,4734
+static struct symbol_op enum_op 174,4869
+static struct symbol_op spec_op 181,5002
+static struct symbol_op char_op 187,5115
+static struct symbol_op int_op 194,5254
+static struct symbol_op double_op 200,5355
+static struct symbol_op float_op 207,5523
+static struct symbol_op short_op 214,5699
+static struct symbol_op signed_op 220,5858
+static struct symbol_op unsigned_op 227,6021
+static struct symbol_op long_op 234,6188
+static struct symbol_op if_op 240,6334
+static struct symbol_op return_op 244,6406
+static struct symbol_op loop_iter_op 248,6486
+static struct symbol_op default_op 252,6566
+static struct symbol_op case_op 256,6648
+static struct symbol_op switch_op 260,6724
+static struct symbol_op for_op 264,6804
+static struct symbol_op while_op 268,6878
+static struct symbol_op do_op 272,6956
+static struct symbol_op goto_op 276,7028
+static struct symbol_op __context___op 280,7104
+static struct symbol_op range_op 284,7190
+static struct symbol_op asm_op 288,7268
+static struct symbol_op packed_op 295,7435
+static struct symbol_op aligned_op 299,7509
+static struct symbol_op attr_mod_op 303,7585
+static struct symbol_op attr_force_op 307,7663
+static struct symbol_op address_space_op 311,7740
+static struct symbol_op mode_op 315,7828
+static struct symbol_op context_op 319,7898
+static struct symbol_op designated_init_op 323,7974
+static struct symbol_op transparent_union_op 327,8066
+static struct symbol_op ignore_attr_op 331,8162
+static struct symbol_op mode_QI_op 335,8241
+static struct symbol_op mode_HI_op 340,8325
+static struct symbol_op mode_SI_op 345,8409
+static struct symbol_op mode_DI_op 350,8493
+static struct symbol_op mode_TI_op 355,8577
+static struct symbol_op mode_word_op 360,8661
+static struct init_keyword 365,8749
+} keyword_table[keyword_table371,8888
+const char *ignored_attributes[ignored_attributes482,13525
+void init_parser(577,14931
+static void fn_local_symbol(602,15639
+static int SENTINEL_ATTR match_idents(608,15760
+struct statement *alloc_statement(alloc_statement626,16084
+static void apply_modifiers(636,16349
+static struct symbol * alloc_indirect_symbol(650,16681
+struct symbol *label_symbol(label_symbol667,17117
+static struct token *struct_union_enum_specifier(struct_union_enum_specifier678,17374
+static struct token *parse_struct_declaration(parse_struct_declaration734,19110
+static struct token *parse_union_declaration(parse_union_declaration752,19593
+static struct token *struct_specifier(struct_specifier757,19743
+static struct token *union_specifier(union_specifier762,19918
+} Num;771,20139
+static void upper_boundary(773,20147
+static void lower_boundary(785,20300
+static int type_is_ok(797,20453
+static struct symbol *bigger_enum_type(bigger_enum_type811,20785
+static void cast_enum_list(824,21081
+static struct token *parse_enum_declaration(parse_enum_declaration840,21481
+static struct token *enum_specifier(enum_specifier960,24822
+static struct token *typeof_specifier(typeof_specifier973,25228
+static struct token *ignore_attribute(ignore_attribute999,26025
+static struct token *attribute_packed(attribute_packed1007,26268
+static struct token *attribute_aligned(attribute_aligned1014,26448
+static void apply_qualifier(1032,26984
+static struct token *attribute_modifier(attribute_modifier1039,27187
+static struct token *attribute_address_space(attribute_address_space1045,27380
+static struct symbol *to_QI_mode(to_QI_mode1060,27828
+static struct symbol *to_HI_mode(to_HI_mode1070,28076
+static struct symbol *to_SI_mode(to_SI_mode1078,28283
+static struct symbol *to_DI_mode(to_DI_mode1086,28486
+static struct symbol *to_TI_mode(to_TI_mode1094,28693
+static struct symbol *to_word_mode(to_word_mode1102,28902
+static struct token *attribute_mode(attribute_mode1110,29109
+static struct token *attribute_context(attribute_context1126,29696
+static struct token *attribute_designated_init(attribute_designated_init1170,30752
+static struct token *attribute_transparent_union(attribute_transparent_union1179,31089
+static struct token *recover_unknown_attribute(recover_unknown_attribute1186,31316
+static struct token *attribute_specifier(attribute_specifier1197,31636
+static const char *storage_class[storage_class1229,32421
+static unsigned long storage_modifiers(1239,32605
+static void set_storage_class(1252,32915
+static struct token *typedef_specifier(typedef_specifier1271,33454
+static struct token *auto_specifier(auto_specifier1277,33603
+static struct token *register_specifier(register_specifier1283,33746
+static struct token *static_specifier(static_specifier1289,33897
+static struct token *extern_specifier(extern_specifier1295,34044
+static struct token *thread_specifier(thread_specifier1301,34191
+static struct token *attribute_force(attribute_force1315,34587
+static struct token *inline_specifier(inline_specifier1321,34757
+static struct token *const_qualifier(const_qualifier1327,34879
+static struct token *volatile_qualifier(volatile_qualifier1333,35033
+static void apply_ctype(1339,35193
+static void specifier_conflict(1359,35680
+static struct symbol * const int_types[int_types1388,36364
+static struct symbol * const signed_types[signed_types1390,36463
+static struct symbol * const unsigned_types[unsigned_types1393,36587
+static struct symbol * const real_types[real_types1396,36713
+static struct symbol * const char_types[char_types1398,36805
+static struct symbol * const * const types[types1400,36893
+struct symbol *ctype_integer(ctype_integer1405,37060
+static struct token *handle_qualifiers(handle_qualifiers1410,37174
+static struct token *declaration_specifiers(declaration_specifiers1427,37569
+static struct token *abstract_array_declarator(abstract_array_declarator1502,39492
+static struct token *skip_attribute(skip_attribute1517,40016
+static struct token *skip_attributes(skip_attributes1536,40399
+static struct token *handle_attributes(handle_attributes1567,41191
+static int is_nested(1584,41663
+enum kind 1610,42306
+	Empty,1611,42318
+	Empty, K_R,1611,42318
+	Empty, K_R, Proto,1611,42318
+	Empty, K_R, Proto, Bad_Func,1611,42318
+static enum kind which_func(1614,42352
+static struct token *direct_declarator(direct_declarator1652,43185
+static struct token *pointer(pointer1699,44619
+static struct token *declarator(declarator1719,45207
+static struct token *handle_bitfield(handle_bitfield1725,45358
+static struct token *declaration_list(declaration_list1773,47167
+static struct token *struct_declaration_list(struct_declaration_list1805,47962
+static struct token *parameter_declaration(parameter_declaration1819,48315
+struct token *typename(typename1834,48768
+static struct token *expression_statement(expression_statement1859,49398
+static struct token *parse_asm_operands(parse_asm_operands1865,49583
+static struct token *parse_asm_clobbers(parse_asm_clobbers1890,50389
+static struct token *parse_asm_labels(parse_asm_labels1902,50680
+static struct token *parse_asm_statement(parse_asm_statement1918,51071
+static struct token *parse_asm_declarator(parse_asm_declarator1945,52017
+static struct statement *make_statement(make_statement1955,52325
+static void start_iterator(1975,52853
+static void end_iterator(1992,53281
+static struct statement *start_function(start_function1997,53356
+static void end_function(2017,54035
+static void start_switch(2035,54593
+static void end_switch(2055,55069
+static void add_case_statement(2062,55226
+static struct token *parse_return_statement(parse_return_statement2079,55628
+static struct token *parse_for_statement(parse_for_statement2090,55998
+static struct token *parse_while_statement(parse_while_statement2125,56964
+static struct token *parse_do_statement(parse_do_statement2142,57392
+static struct token *parse_if_statement(parse_if_statement2165,58113
+static inline struct token *case_statement(case_statement2177,58499
+static struct token *parse_case_statement(parse_case_statement2185,58744
+static struct token *parse_default_statement(parse_default_statement2193,59034
+static struct token *parse_loop_iterator(parse_loop_iterator2198,59172
+static struct token *parse_switch_statement(parse_switch_statement2208,59521
+static struct token *parse_goto_statement(parse_goto_statement2218,59834
+static struct token *parse_context_statement(parse_context_statement2234,60367
+static struct token *parse_range_statement(parse_range_statement2249,60856
+static struct token *statement(statement2260,61316
+static struct token *label_statement(label_statement2292,62265
+static struct token * statement_list(2308,62731
+static struct token *identifier_list(identifier_list2336,63488
+static struct token *parameter_type_list(parameter_type_list2355,63997
+struct token *compound_statement(compound_statement2384,64623
+static struct expression *identifier_expression(identifier_expression2390,64767
+static struct expression *index_expression(index_expression2397,64963
+static struct token *single_initializer(single_initializer2414,65438
+static struct token *initializer_list(initializer_list2474,67140
+struct token *initializer(initializer2490,67451
+static void declare_argument(2501,67810
+static struct token *parse_function_body(parse_function_body2510,68023
+static void promote_k_r_types(2575,69968
+static void apply_k_r_types(2583,70211
+static struct token *parse_k_r_arguments(parse_k_r_arguments2613,71049
+static struct token *toplevel_asm_declaration(toplevel_asm_declaration2637,71694
+struct token *external_declaration(external_declaration2653,72113
+
+compat-cygwin.c,92
+void *blob_alloc(blob_alloc19,264
+void blob_free(31,527
+long double string_to_ld(37,637
+
+ptrlist.c,376
+int ptr_list_size(19,321
+int linearize_ptr_list(40,799
+void pack_ptr_list(67,1337
+void split_ptr_list_head(100,1929
+void **__add_ptr_list(__add_ptr_list117,2360
+int delete_ptr_list_entry(151,3140
+int replace_ptr_list_entry(168,3434
+void * undo_ptr_list_last(185,3798
+void * delete_ptr_list_last(205,4144
+void concat_ptr_list(225,4512
+void __free_ptr_list(233,4673
+
+compat-mingw.c,92
+void *blob_alloc(blob_alloc20,283
+void blob_free(29,422
+long double string_to_ld(34,492
+
+symbol.c,3684
+struct symbol_list *translation_unit_used_list translation_unit_used_list27,494
+void access_symbol(32,634
+struct symbol *lookup_symbol(lookup_symbol42,865
+struct context *alloc_context(alloc_context55,1099
+struct symbol *alloc_symbol(alloc_symbol60,1168
+struct struct_union_info 69,1345
+static void lay_out_union(78,1491
+static int bitfield_base_size(94,1877
+static void lay_out_struct(106,2134
+static struct symbol * examine_struct_union_type(165,3699
+static struct symbol *examine_base_type(examine_base_type192,4404
+static struct symbol * examine_array_type(211,5001
+static struct symbol *examine_bitfield_type(examine_bitfield_type228,5485
+void merge_type(254,6275
+static int count_array_initializer(265,6712
+static struct symbol * examine_node_type(312,7834
+static struct symbol *examine_enum_type(examine_enum_type348,8827
+static struct symbol *examine_pointer_type(examine_pointer_type362,9291
+struct symbol *examine_symbol_type(examine_symbol_type381,9793
+const char* get_type_name(443,11311
+struct symbol *examine_pointer_target(examine_pointer_target472,11974
+static struct symbol_list *restr,restr477,12069
+static struct symbol_list *restr, *fouled;fouled477,12069
+void create_fouled(479,12113
+struct symbol *befoul(befoul492,12418
+void check_declaration(512,12784
+void bind_symbol(541,13480
+struct symbol *create_symbol(create_symbol579,14519
+static int evaluate_to_integer(588,14773
+static int evaluate_expect(594,14872
+static int arguments_choose(601,15038
+static int evaluate_choose(624,15527
+static int expand_expect(640,15882
+static int expand_warning(653,16180
+static struct symbol_op constant_p_op 694,17230
+static struct symbol_op safe_p_op 699,17339
+static struct symbol_op warning_op 704,17440
+static struct symbol_op expect_op 709,17543
+static struct symbol_op choose_op 714,17640
+static struct symbol builtin_fn_type 722,17767
+static struct sym_init 723,17847
+} eval_init_table[eval_init_table728,17966
+struct symbol	int_type,741,18401
+		fp_type;742,18425
+struct symbol	bool_ctype,748,18519
+struct symbol	bool_ctype, void_ctype,748,18519
+struct symbol	bool_ctype, void_ctype, type_ctype,748,18519
+		char_ctype,749,18569
+		char_ctype, schar_ctype,749,18569
+		char_ctype, schar_ctype, uchar_ctype,749,18569
+		short_ctype,750,18609
+		short_ctype, sshort_ctype,750,18609
+		short_ctype, sshort_ctype, ushort_ctype,750,18609
+		int_ctype,751,18652
+		int_ctype, sint_ctype,751,18652
+		int_ctype, sint_ctype, uint_ctype,751,18652
+		long_ctype,752,18689
+		long_ctype, slong_ctype,752,18689
+		long_ctype, slong_ctype, ulong_ctype,752,18689
+		llong_ctype,753,18729
+		llong_ctype, sllong_ctype,753,18729
+		llong_ctype, sllong_ctype, ullong_ctype,753,18729
+		lllong_ctype,754,18772
+		lllong_ctype, slllong_ctype,754,18772
+		lllong_ctype, slllong_ctype, ulllong_ctype,754,18772
+		float_ctype,755,18818
+		float_ctype, double_ctype,755,18818
+		float_ctype, double_ctype, ldouble_ctype,755,18818
+		string_ctype,756,18862
+		string_ctype, ptr_ctype,756,18862
+		string_ctype, ptr_ctype, lazy_ptr_ctype,756,18862
+		incomplete_ctype,757,18905
+		incomplete_ctype, label_ctype,757,18905
+		incomplete_ctype, label_ctype, bad_ctype,757,18905
+		null_ctype;758,18949
+struct symbol	zero_int;760,18964
+#define __INIT_IDENT(762,18989
+#define __IDENT(763,19075
+void init_symbols(768,19171
+#define __IDENT(773,19276
+#define MOD_ESIGNED 789,19643
+#define MOD_LL 790,19700
+#define MOD_LLL 791,19741
+static const struct ctype_declare 792,19774
+} ctype_declaration[ctype_declaration799,19933
+#undef MOD_LLL836,23251
+#undef MOD_LL837,23266
+#undef MOD_ESIGNED838,23280
+void init_ctype(840,23300
+
+ast-model.c,614
+static GObjectClass *parent_class parent_class41,1757
+void inspect_child_node(44,1860
+AstNode* ast_nth_child(54,1991
+gboolean ast_set_iter(68,2216
+ast_get_type 86,2783
+ast_class_init 131,4137
+ast_tree_model_init 151,4768
+ast_init 177,5700
+ast_finalize 192,6197
+ast_get_flags(214,6927
+ast_get_n_columns(228,7331
+ast_get_column_type(242,7702
+ast_get_iter(260,8328
+ast_get_path(287,9046
+ast_get_value(311,9680
+ast_iter_next(338,10345
+ast_iter_children(362,11173
+ast_iter_has_child 379,11753
+ast_iter_n_children 401,12592
+ast_iter_nth_child(423,13345
+ast_iter_parent 446,14123
+ast_new 457,14377
+
+obfuscate.c,122
+static void emit_entrypoint(27,574
+static void emit_symbol(32,632
+static void emit_symbol_list(40,766
+int main(50,943
+
+allocate.c,161
+void protect_allocations(30,880
+void drop_all_allocations(35,962
+void free_one_entry(51,1302
+void *allocate(allocate58,1433
+void show_allocations(105,2669
+
+test-inspect.c,52
+static void expand_symbols(19,284
+int main(27,438
+
+test-dissect.c,294
+static unsigned dotc_stream;3,22
+static inline char storage(5,52
+static inline const char *show_mode(show_mode16,359
+#define	U(23,468
+#undef	U27,574
+static void print_usage(32,600
+static void r_symbol(45,929
+static void r_member(57,1199
+static void r_symdef(74,1643
+int main(79,1720
+
+unssa.c,176
+static void remove_phisrc_defines(33,1228
+static void replace_phi_node(43,1470
+static void rewrite_phi_bb(63,1897
+static void rewrite_phisrc_bb(79,2295
+int unssa(126,3381
+
+validation/noderef.c,69
+# define __A	1,0
+struct x 3,39
+struct y 8,70
+static void h(12,96
+
+validation/extern-inline.c,18
+f(4,53
+g(12,127
+
+validation/nested-declarator2.c,129
+typedef int T;1,0
+static void z(8,165
+static void w1(16,260
+static int (-bad2)bad226,462
+static void [2](*bad3)bad327,482
+
+validation/non-pointer-null.c,22
+static void *p p1,0
+
+validation/init-char-array.c,113
+static char *s[s4,78
+static char t[t5,112
+static char u[u6,149
+static char v[v7,182
+static void f(8,213
+
+validation/bitfields.c,33
+} y;10,193
+static int b(14,216
+
+validation/badtype3.c,9
+foo 2,4
+
+validation/typeof-attribute.c,60
+#define __percpu 1,0
+#define convert(4,98
+int main(7,189
+
+validation/label-attr.c,20
+static int foo(1,0
+
+validation/declaration-after-statement-c99.c,22
+static void func 1,0
+
+validation/cond_expr2.c,20
+static void f(4,70
+
+validation/badtype1.c,0
+
+validation/reserved.c,0
+
+validation/nested-declarator.c,87
+typedef int T;1,0
+static void g(3,35
+static void h(9,85
+static int [2](*p)p13,132
+
+validation/struct-as.c,67
+#define __user 5,78
+struct hello 7,128
+static int broken(13,189
+
+validation/sizeof-compound-postfix.c,35
+struct foo 1,0
+static int a(2,24
+
+validation/foul-bitwise.c,155
+typedef unsigned short __attribute__((bitwise))__le16;1,0
+static __le16 foo(2,55
+static int baz(7,105
+static int barf(12,153
+static __le16 bar(17,207
+
+validation/logical.c,43
+static int or(5,61
+static int and(10,113
+
+validation/declaration-after-statement-c89.c,22
+static void func 1,0
+
+validation/attr_in_parameter.c,60
+#define A 1,0
+static int A *q;q3,63
+static void g(5,130
+
+validation/restricted-typeof.c,90
+typedef unsigned __attribute__((bitwise)) A;1,0
+static A x;2,45
+static __typeof__(3,57
+
+validation/bad-assignment.c,20
+static int foo(1,0
+
+validation/old-initializer.c,42
+struct s 1,0
+static struct s the_s 5,23
+
+validation/builtin_safe1.c,71
+#define MY_MACRO(1,0
+int h(7,149
+int i(8,183
+static int foo(10,219
+
+validation/identifier_list.c,19
+typedef int T;1,0
+
+validation/initializer-entry-defined-twice.c,226
+struct normal 4,132
+static struct normal struct_error 9,178
+struct has_union 15,326
+static struct has_union union_error 24,398
+struct empty 33,602
+struct same_offset 35,621
+static struct same_offset not_an_error 40,681
+
+validation/inline_compound_literals.c,93
+struct foo 1,0
+static inline void baz(5,25
+static void barf(10,85
+static void foo(15,121
+
+validation/type1.c,77
+static inline int deref(11,284
+struct hello 16,340
+static int test(20,376
+
+validation/outer-scope.c,55
+struct st 2,12
+#define FOO3,36
+static int test(7,96
+
+validation/specifiers1.c,729
+static void OK(1,0
+#define TEST(3,23
+#define TEST2(4,59
+#define TEST3(5,99
+#define TEST4(7,205
+#define T 15,460
+#undef T17,486
+#define T 19,496
+#undef T21,538
+#define T 23,548
+#undef T25,594
+#define T 27,604
+#undef T30,650
+#define T 32,660
+#undef T34,684
+#define T 36,694
+#undef T39,737
+#define T 41,747
+#undef T44,808
+#define T 46,818
+#undef T49,888
+#define T 51,898
+#undef T54,947
+#define T 56,957
+#undef T59,1024
+#define T 61,1034
+#undef T64,1118
+#define T 66,1128
+#undef T69,1204
+#define T 71,1214
+#undef T74,1269
+#define T 76,1279
+#undef T79,1352
+#define T 81,1362
+#undef T84,1452
+#define T 86,1462
+#undef T88,1490
+#define T 90,1500
+#undef T92,1530
+#define T 94,1540
+#undef T96,1582
+
+validation/calling-convention-attributes.c,490
+typedef void (__attribute__((cdecl)) *c2)c22,45
+typedef c2 c2ptr;3,94
+typedef void (__attribute__((__cdecl__)) *c_2)c_26,163
+typedef c_2 c_2ptr;7,217
+typedef void (__attribute__((stdcall)) *s2)s210,285
+typedef s2 s2ptr;11,336
+typedef void (__attribute__((__stdcall__)) *s_2)s_214,407
+typedef s_2 s_2ptr;15,463
+typedef void (__attribute__((fastcall)) *f2)f218,532
+typedef f2 f2ptr;19,584
+typedef void (__attribute__((__fastcall__)) *f_2)f_222,656
+typedef f_2 f_2ptr;23,713
+
+validation/member_of_typeof.c,77
+static struct foo 1,0
+static struct foo {int x;} v;1,0
+static typeof(2,30
+
+validation/bad-array-designated-initializer.c,20
+static int a[a1,0
+
+validation/local-label.c,20
+static void g(2,26
+
+validation/varargs1.c,31
+static void sparse_error(2,36
+
+validation/comma.c,63
+static char a[a1,0
+static char b[b2,35
+static void f(3,79
+
+validation/typedef_shadow.c,39
+typedef int T;1,0
+static void f(2,15
+
+validation/compare-null-to-int.c,36
+static unsigned int comparison 1,0
+
+validation/check_byte_count-ice.c,22
+static void foo(3,46
+
+validation/builtin_unreachable.c,19
+static int g 5,76
+
+validation/old-initializer-nowarn.c,42
+struct s 1,0
+static struct s the_s 5,23
+
+validation/struct-size1.c,115
+struct B 2,10
+struct E 6,50
+static void f(10,97
+static const struct { int x; } foo[foo14,165
+struct C 15,213
+
+validation/attr-warning.c,25
+# define __warndecl(1,0
+
+validation/restrict-array.c,28
+#define __restrict_arr 1,0
+
+validation/test-be.c,137
+#undef PRINT_OUTPUTS4,45
+static void test_func_args(6,67
+static int binop_s32(12,137
+static void test_binops(24,246
+int main 36,447
+
+validation/label-asm.c,41
+#define barrier(1,0
+static void f(3,57
+
+validation/badtype2.c,23
+static undef foo(3,45
+
+validation/badtype4.c,12
+void a(1,0
+
+validation/bad-cast.c,21
+static int foo(3,12
+
+validation/designated-init.c,1380
+struct s1 1,0
+struct s2 6,32
+struct nest1 11,97
+struct nest2 16,146
+static struct s1 s1_positional 21,228
+static struct s1 s1_designated 22,272
+static struct s2 s2_positional 23,326
+static struct s2 s2_designated 24,370
+static struct nest1 nest1_positional 25,424
+static struct nest1 nest1_designated_outer 29,492
+static struct nest1 nest1_designated_inner 33,578
+static struct nest1 nest1_designated_both 37,672
+static struct nest2 nest2_positional 41,777
+static struct nest2 nest2_designated_outer 45,845
+static struct nest2 nest2_designated_inner 49,931
+static struct nest2 nest2_designated_both 53,1025
+	anon_positional 62,1198
+	anon_designated 63,1228
+static struct s1 s1_array[s1_array65,1268
+static struct s2 s2_array[s2_array70,1338
+static struct s1 ret_s1_positional(75,1408
+static struct s1 ret_s1_designated(80,1486
+static struct s2 ret_s2_positional(85,1574
+static struct s2 ret_s2_designated(90,1652
+static struct nest1 ret_nest1_positional(95,1740
+static struct nest1 ret_nest1_designated_outer(103,1851
+static struct nest1 ret_nest1_designated_inner(111,1980
+static struct nest1 ret_nest1_designated_both(119,2117
+static struct nest2 ret_nest2_positional(127,2265
+static struct nest2 ret_nest2_designated_outer(135,2376
+static struct nest2 ret_nest2_designated_inner(143,2505
+static struct nest2 ret_nest2_designated_both(151,2642
+
+validation/context.c,1267
+#define __cond_lock(1,0
+static void a(3,61
+static void r(8,133
+#define ca(14,233
+static void good_paired1(16,274
+static void good_paired2(22,322
+static void good_paired3(30,382
+static void good_lock1(38,442
+static void good_lock2(43,512
+static void good_lock3(50,594
+static void good_unlock1(57,676
+static void good_unlock2(62,748
+static void warn_lock1(69,832
+static void warn_lock2(74,872
+static void warn_lock3(81,924
+static void warn_unlock1(88,976
+static void warn_unlock2(93,1018
+static int good_if1(102,1107
+static void good_if2(113,1201
+static void good_if3(121,1267
+static int warn_if1(131,1345
+static int warn_if2(140,1427
+static void good_while1(150,1515
+static void good_while2(158,1584
+static void good_while3(166,1656
+static void good_while4(178,1769
+static void good_while5(189,1866
+static void warn_while1(200,1963
+static void warn_while2(207,2028
+static void warn_while3(214,2093
+static void good_goto1(224,2192
+static void good_goto2(232,2267
+static void good_goto3(242,2360
+static void good_goto4(253,2475
+static void good_goto5(263,2578
+static void warn_goto1(274,2696
+static void warn_goto2(283,2777
+static void warn_goto3(293,2870
+static void good_cond_lock1(303,2976
+static void warn_cond_lock1(311,3097
+
+validation/integer-promotions.c,25
+static int add_char(1,0
+
+validation/struct-ns2.c,8
+h 9,85
+
+validation/struct-ns1.c,71
+f 5,95
+    struct Foo 11,274
+enum Foo 17,402
+enum Foo { FOO 17,402
+
+validation/static-forward-decl.c,12
+int f(3,21
+
+validation/cond_expr.c,56
+static int x;6,192
+static double y;7,206
+int a(8,223
+
+validation/asm-goto-lables.c,40
+static inline int __static_cpu_has(1,0
+
+validation/definitions.c,45
+static int g(2,27
+static inline int f(6,70
+
+validation/declaration-after-statement-ansi.c,22
+static void func 1,0
+
+validation/escapes.c,44
+static int e[e1,0
+static char *s s3,107
+
+validation/missing-ident.c,61
+int 1,0
+int 2,9
+int;5,33
+union bar 7,50
+struct baz 8,77
+
+validation/struct-attribute-placement.c,49
+struct __attribute__((__aligned__(16))) foo 1,0
+
+validation/typesign.c,249
+static unsigned int * s_to_u_return(1,0
+static signed int * u_to_s_return(6,69
+static unsigned int * s_to_u_init(11,138
+static signed int * u_to_s_init(17,229
+static unsigned int * s_to_u_assign(23,318
+static signed int * u_to_s_assign(30,416
+
+validation/bad-typeof.c,20
+static int fun(1,0
+
+validation/field-overlap.c,49
+} a 7,58
+static struct {int x, y, z;} w[w9,90
+
+validation/preprocessor/preprocessor16.c,0
+
+validation/preprocessor/preprocessor14.c,42
+#define A(4,42
+#define B(6,85
+A(B5,79
+
+validation/preprocessor/preprocessor8.c,146
+#define A(1,0
+#define B(2,18
+#define C(3,36
+#define D(4,60
+#define E 5,77
+#define F(6,91
+#define G 7,118
+#define H 8,133
+#define I(9,148
+
+validation/preprocessor/preprocessor15.c,63
+#define A 1,0
+#define B 2,15
+#define C(3,29
+#define D(4,49
+
+validation/preprocessor/preprocessor4.c,35
+#define foo 1,0
+#define mac(2,16
+
+validation/preprocessor/preprocessor11.c,163
+#define A(1,0
+#define B(2,15
+#define C(3,27
+#define D(4,40
+#define E(5,53
+#define F(6,76
+#define G(7,89
+#define H(8,105
+#define I(9,123
+#define J(10,138
+
+validation/preprocessor/preprocessor18.c,0
+
+validation/preprocessor/preprocessor3.c,85
+#define LP 9,188
+#define A(11,202
+#define B(12,221
+#define SCAN(14,241
+A(16,260
+
+validation/preprocessor/preprocessor19.c,34
+#define A 3,110
+#define A 4,122
+
+validation/preprocessor/preprocessor9.c,17
+#define A 4,123
+
+validation/preprocessor/preprocessor13.c,24
+#define A(4,34
+A(5,69
+
+validation/preprocessor/preprocessor6.c,53
+#define __devinitdata 15,503
+#define VENDOR(17,563
+
+validation/preprocessor/preprocessor21.c,0
+
+validation/preprocessor/preprocessor10.c,33
+#define A4,130
+#define B 5,140
+
+validation/preprocessor/preprocessor17.c,0
+
+validation/preprocessor/preprocessor2.c,58
+#define TWO 1,0
+#define UNARY(3,18
+#define BINARY(4,45
+
+validation/preprocessor/preprocessor12.c,24
+#define A(4,21
+A(5,54
+
+validation/preprocessor/preprocessor22.c,52
+#define CONFIG_FOO 1,0
+#define define_struct(3,22
+
+validation/preprocessor/preprocessor5.c,31
+#define a 1,0
+#define b(2,13
+
+validation/preprocessor/preprocessor1.c,54
+#define func(1,0
+#define bar 2,18
+#define foo 3,36
+
+validation/preprocessor/preprocessor20.c,30
+#define X2,28
+#define Y3,38
+
+validation/preprocessor/preprocessor7.c,63
+#define A(1,0
+#define D 2,20
+#define C(3,36
+#define E(4,56
+
+validation/choose_expr.c,80
+static int x 1,0
+static int y 2,59
+static char s[s3,118
+static int z 4,137
+
+validation/address_space.c,50
+#define __user 1,0
+static int sys_do_stuff(5,87
+
+validation/bad-ternary-cond.c,20
+static int foo(1,0
+
+validation/label-scope.c,37
+static int f(1,0
+static int g(6,51
+
+validation/specifiers2.c,19
+typedef int T;1,0
+
+validation/declaration-after-statement-default.c,22
+static void func 1,0
+
+validation/function-pointer-modifier-inheritance.c,35
+int skb_append_datato_frags(9,274
+
+validation/dubious-bitwise-with-not.c,377
+static unsigned int ok1 1,0
+static unsigned int bad1 2,37
+static unsigned int ok2 3,74
+static unsigned int bad2 4,111
+static unsigned int ok3 5,148
+static unsigned int bad3 6,185
+static unsigned int ok4 7,222
+static unsigned int bad4 8,259
+static unsigned int ok5 9,296
+static unsigned int bad5 10,333
+static unsigned int ok6 11,370
+static unsigned int bad6 12,407
+
+validation/double-semicolon.c,23
+static void test(2,45
+
+validation/enum_scope.c,99
+enum {A A1,0
+static void f(3,16
+	enum {A A5,38
+	enum {A = A 5,38
+	enum {A = A + 1, B}B5,38
+
+validation/multi_typedef.c,84
+typedef int T,1,0
+typedef int T, *P;P1,0
+static void f(2,19
+static void g(7,77
+
+linearize.h,2811
+#define LINEARIZE_H2,20
+struct pseudo_user 13,205
+enum pseudo_type 22,365
+	PSEUDO_VOID,23,384
+	PSEUDO_REG,24,398
+	PSEUDO_SYM,25,411
+	PSEUDO_VAL,26,424
+	PSEUDO_ARG,27,437
+	PSEUDO_PHI,28,450
+struct pseudo 31,467
+#define VOID 45,691
+struct multijmp 47,720
+struct asm_constraint 52,788
+struct asm_rules 61,985
+struct instruction 69,1153
+enum opcode 131,2418
+	OP_BADOP,132,2432
+	OP_ENTRY,135,2457
+	OP_TERMINATOR,138,2487
+	OP_RET 139,2503
+	OP_RET = OP_TERMINATOR,139,2503
+	OP_BR,140,2528
+	OP_SWITCH,141,2536
+	OP_INVOKE,142,2548
+	OP_COMPUTEDGOTO,143,2560
+	OP_UNWIND,144,2578
+	OP_TERMINATOR_END 145,2590
+	OP_TERMINATOR_END = OP_UNWIND,145,2590
+	OP_BINARY,148,2638
+	OP_ADD 149,2650
+	OP_ADD = OP_BINARY,149,2650
+	OP_SUB,150,2671
+	OP_MULU,151,2680
+	OP_MULU, OP_MULS,151,2680
+	OP_DIVU,152,2699
+	OP_DIVU, OP_DIVS,152,2699
+	OP_MODU,153,2718
+	OP_MODU, OP_MODS,153,2718
+	OP_SHL,154,2737
+	OP_LSR,155,2746
+	OP_LSR, OP_ASR,155,2746
+	OP_AND,158,2780
+	OP_OR,159,2789
+	OP_XOR,160,2797
+	OP_AND_BOOL,161,2806
+	OP_OR_BOOL,162,2820
+	OP_BINARY_END 163,2833
+	OP_BINARY_END = OP_OR_BOOL,163,2833
+	OP_BINCMP,166,2888
+	OP_SET_EQ 167,2900
+	OP_SET_EQ = OP_BINCMP,167,2900
+	OP_SET_NE,168,2924
+	OP_SET_LE,169,2936
+	OP_SET_GE,170,2948
+	OP_SET_LT,171,2960
+	OP_SET_GT,172,2972
+	OP_SET_B,173,2984
+	OP_SET_A,174,2995
+	OP_SET_BE,175,3006
+	OP_SET_AE,176,3018
+	OP_BINCMP_END 177,3030
+	OP_BINCMP_END = OP_SET_AE,177,3030
+	OP_NOT,180,3070
+	OP_NEG,181,3079
+	OP_SEL,184,3124
+	OP_MALLOC,187,3149
+	OP_FREE,188,3161
+	OP_ALLOCA,189,3171
+	OP_LOAD,190,3183
+	OP_STORE,191,3193
+	OP_SETVAL,192,3204
+	OP_SYMADDR,193,3216
+	OP_GET_ELEMENT_PTR,194,3229
+	OP_PHI,197,3264
+	OP_PHISOURCE,198,3273
+	OP_CAST,199,3288
+	OP_SCAST,200,3298
+	OP_FPCAST,201,3309
+	OP_PTRCAST,202,3321
+	OP_INLINED_CALL,203,3334
+	OP_CALL,204,3352
+	OP_VANEXT,205,3362
+	OP_VAARG,206,3374
+	OP_SLICE,207,3385
+	OP_SNOP,208,3396
+	OP_LNOP,209,3406
+	OP_NOP,210,3416
+	OP_DEATHNOTE,211,3425
+	OP_ASM,212,3440
+	OP_CONTEXT,215,3506
+	OP_RANGE,216,3519
+	OP_COPY,219,3582
+struct basic_block 225,3647
+static inline int is_branch_goto(236,3968
+static inline void add_bb(241,4098
+static inline void add_instruction(246,4210
+static inline void add_multijmp(251,4335
+static inline pseudo_t *add_pseudo(add_pseudo256,4459
+static inline int remove_pseudo(261,4579
+static inline int bb_terminated(266,4733
+static inline int bb_reachable(276,4977
+static inline void add_pseudo_ptr(281,5057
+static inline void add_pseudo_user_ptr(286,5168
+static inline int has_use_list(291,5297
+static inline struct pseudo_user *alloc_pseudo_user(alloc_pseudo_user296,5409
+static inline void use_pseudo(304,5611
+static inline void remove_bb_from_list(311,5793
+static inline void replace_bb_in_list(316,5971
+struct entrypoint 322,6176
+
+target.h,102
+#define TARGET_H2,17
+static inline int bits_to_bytes(50,815
+static inline int bytes_to_bits(55,908
+
+flow.h,82
+#define FLOW_H2,15
+#define REPEAT_CSE	8,86
+#define REPEAT_SYMBOL_CLEANUP	9,108
+
+allocate.h,242
+#define ALLOCATE_H2,19
+struct allocation_blob 4,39
+struct allocator_struct 10,150
+#define __DECLARE_ALLOCATOR(26,701
+#define DECLARE_ALLOCATOR(32,931
+#define __DO_ALLOCATOR(34,994
+#define __ALLOCATOR(60,1689
+#define ALLOCATOR(63,1778
+
+compile.h,23
+#define COMPILE_H2,18
+
+ast-inspect.h,29
+#define _AST_INSPECT_H_3,25
+
+symbol.h,2906
+#define SYMBOL_H2,17
+enum namespace 27,635
+	NS_NONE 28,652
+	NS_MACRO 29,666
+	NS_TYPEDEF 30,681
+	NS_STRUCT 31,698
+	NS_LABEL 32,750
+	NS_SYMBOL 33,765
+	NS_ITERATOR 34,782
+	NS_PREPROCESSOR 35,801
+	NS_UNDEF 36,824
+	NS_KEYWORD 37,841
+enum type 40,864
+	SYM_UNINITIALIZED,41,876
+	SYM_PREPROCESSOR,42,896
+	SYM_BASETYPE,43,915
+	SYM_NODE,44,930
+	SYM_PTR,45,941
+	SYM_FN,46,951
+	SYM_ARRAY,47,960
+	SYM_STRUCT,48,972
+	SYM_UNION,49,985
+	SYM_ENUM,50,997
+	SYM_TYPEDEF,51,1008
+	SYM_TYPEOF,52,1022
+	SYM_MEMBER,53,1035
+	SYM_BITFIELD,54,1048
+	SYM_LABEL,55,1063
+	SYM_RESTRICT,56,1075
+	SYM_FOULED,57,1090
+	SYM_KEYWORD,58,1103
+	SYM_BAD,59,1117
+enum keyword 62,1131
+	KW_SPECIFIER 63,1146
+	KW_MODIFIER	64,1171
+	KW_QUALIFIER	65,1194
+	KW_ATTRIBUTE	66,1218
+	KW_STATEMENT	67,1242
+	KW_ASM	68,1266
+	KW_MODE	69,1285
+	KW_SHORT	70,1305
+	KW_LONG	71,1325
+	KW_EXACT	72,1345
+struct context 75,1369
+struct ctype 84,1536
+struct decl_state 92,1684
+struct symbol_op 99,1843
+#define SYM_ATTR_WEAK	118,2535
+#define SYM_ATTR_NORMAL	119,2560
+#define SYM_ATTR_STRONG	120,2587
+struct symbol 122,2615
+#define MOD_AUTO	186,4323
+#define MOD_REGISTER	187,4347
+#define MOD_STATIC	188,4375
+#define MOD_EXTERN	189,4401
+#define MOD_CONST	191,4428
+#define MOD_VOLATILE	192,4453
+#define MOD_SIGNED	193,4481
+#define MOD_UNSIGNED	194,4507
+#define MOD_CHAR	196,4536
+#define MOD_SHORT	197,4560
+#define MOD_LONG	198,4585
+#define MOD_LONGLONG	199,4609
+#define MOD_LONGLONGLONG	200,4637
+#define MOD_TYPEDEF	202,4670
+#define MOD_TLS	204,4699
+#define MOD_INLINE	205,4724
+#define MOD_ADDRESSABLE	206,4751
+#define MOD_NOCAST	208,4784
+#define MOD_NODEREF	209,4812
+#define MOD_ACCESSED	210,4841
+#define MOD_TOPLEVEL	211,4871
+#define MOD_ASSIGNED	213,4915
+#define MOD_TYPE	214,4946
+#define MOD_SAFE	215,4973
+#define MOD_USERTYPE	217,5034
+#define MOD_NORETURN	218,5066
+#define MOD_EXPLICITLY_SIGNED	219,5098
+#define MOD_BITWISE	220,5139
+#define MOD_NONLOCAL	223,5172
+#define MOD_STORAGE	224,5221
+#define MOD_SIGNEDNESS	225,5321
+#define MOD_LONG_ALL	226,5396
+#define MOD_SPECIFIER	227,5462
+#define MOD_SIZE	228,5539
+#define MOD_IGNORE 229,5594
+#define MOD_PTRINHERIT 231,5732
+#define __IDENT(257,6508
+#define symbol_is_typename(261,6585
+static inline struct symbol *get_base_type(get_base_type296,8153
+static inline int is_int_type(301,8278
+static inline int is_enum_type(311,8544
+static inline int is_type_type(318,8702
+static inline int is_ptr_type(323,8808
+static inline int is_float_type(330,9007
+static inline int is_byte_type(337,9169
+static inline int is_void_type(342,9296
+static inline int is_function(349,9443
+static inline int is_extern_inline(354,9537
+static inline int get_sym_type(361,9722
+static inline struct symbol *lookup_keyword(lookup_keyword370,9921
+#define is_restricted_type(377,10081
+#define is_fouled_type(378,10151
+#define is_bitfield_type(379,10215
+
+parse.h,367
+#define PARSE_H2,16
+enum statement_type 14,257
+	STMT_NONE,15,279
+	STMT_DECLARATION,16,291
+	STMT_EXPRESSION,17,310
+	STMT_COMPOUND,18,328
+	STMT_IF,19,344
+	STMT_RETURN,20,354
+	STMT_CASE,21,368
+	STMT_SWITCH,22,380
+	STMT_ITERATOR,23,394
+	STMT_LABEL,24,410
+	STMT_GOTO,25,423
+	STMT_ASM,26,435
+	STMT_CONTEXT,27,446
+	STMT_RANGE,28,461
+struct statement 31,478
+
+lib.h,1424
+#define LIB_H2,14
+#define DO_STRINGIFY(20,346
+#define STRINGIFY(21,373
+#define ARRAY_SIZE(24,430
+struct position 34,711
+struct cmdline_include 44,869
+typedef struct pseudo *pseudo_t;pseudo_t73,1576
+#define FORMAT_ATTR(78,1727
+#define NORETURN_ATTR 79,1806
+#define SENTINEL_ATTR 80,1859
+#define FORMAT_ATTR(82,1918
+#define NORETURN_ATTR83,1943
+#define SENTINEL_ATTR84,1965
+extern void die(86,1994
+static inline int statement_list_size(135,3649
+static inline int expression_list_size(140,3771
+static inline int instruction_list_size(145,3895
+static inline int pseudo_list_size(150,4021
+static inline int bb_list_size(155,4137
+static inline void free_instruction_list(160,4254
+static inline struct instruction * delete_last_instruction(165,4374
+static inline struct basic_block * delete_last_basic_block(170,4524
+static inline struct basic_block *first_basic_block(first_basic_block175,4676
+static inline struct instruction *last_instruction(last_instruction179,4812
+static inline struct instruction *first_instruction(first_instruction184,4947
+static inline pseudo_t first_pseudo(189,5084
+static inline void concat_symbol_list(194,5200
+static inline void concat_basic_block_list(199,5361
+static inline void concat_instruction_list(204,5537
+static inline void add_symbol(209,5713
+static inline void add_statement(214,5821
+static inline void add_expression(219,5940
+#define hashval(224,6062
+
+ast-view.h,0
+
+ast-model.h,485
+#define _ast_model_h_10,90
+#define AST_TYPE_NODE 16,172
+#define AST_NODE(17,229
+#define AST_NODE_CLASS(18,329
+#define AST_IS_NODE(19,434
+#define AST_IS_NODE_CLASS(20,525
+#define AST_NODE_GET_CLASS(21,616
+	AST_COL_RECORD 25,729
+	AST_COL_NAME,26,750
+	AST_N_COLUMNS,27,765
+typedef struct AstNode AstNode;31,787
+typedef struct AstNodeClass AstNodeClass;32,819
+struct AstNode43,1255
+struct AstNodeClass60,1531
+void ast_append_child(71,1729
+void ast_append_attribute(82,2000
+
+storage.h,431
+#define STORAGE_H2,18
+enum storage_type 13,346
+	REG_UDEF,14,366
+	REG_REG,15,377
+	REG_STACK,16,387
+	REG_FRAME,17,399
+	REG_SYM,18,411
+	REG_ARG,19,421
+	REG_BAD,20,431
+enum inout_enum 23,445
+	STOR_IN,24,463
+	STOR_OUT25,473
+struct storage 31,558
+struct storage_hash 44,759
+static inline struct storage *alloc_storage(alloc_storage64,1408
+static inline struct storage_hash *alloc_storage_hash(alloc_storage_hash69,1491
+
+ptrlist.h,1800
+#define PTR_LIST_H2,19
+#define container(12,157
+#define DECLARE_PTR_LIST(16,280
+#define CHECK_TYPE(17,355
+#define TYPEOF(18,420
+#define VRFY_PTR_LIST(19,472
+#define MKTYPE(26,731
+#define LIST_NODE_NR 28,787
+struct ptr_list 30,814
+#define ptr_list_empty(37,920
+#define add_ptr_list_tag(57,1712
+#define add_ptr_list_notag(59,1862
+#define add_ptr_list(63,2103
+#define free_ptr_list(65,2170
+#define PTR_ENTRY_NOTAG(68,2288
+#define PTR_ENTRY(69,2332
+static inline void *first_ptr_list(first_ptr_list71,2409
+static inline void *last_ptr_list(last_ptr_list78,2527
+#define DO_PREPARE(87,2674
+#define DO_NEXT(96,2985
+#define DO_RESET(110,3342
+#define DO_FINISH(117,3530
+#define PREPARE_PTR_LIST(121,3644
+#define NEXT_PTR_LIST(124,3754
+#define RESET_PTR_LIST(127,3846
+#define FINISH_PTR_LIST(130,3940
+#define DO_FOR_EACH(133,4025
+#define DO_END_FOR_EACH(144,4401
+#define DO_FOR_EACH_REVERSE(152,4599
+#define DO_END_FOR_EACH_REVERSE(166,5026
+#define DO_REVERSE(174,5216
+#define RECURSE_PTR_REVERSE(191,5744
+#define DO_THIS_ADDRESS(195,5908
+#define FOR_EACH_PTR(198,6012
+#define END_FOR_EACH_PTR(201,6119
+#define FOR_EACH_PTR_NOTAG(204,6211
+#define END_FOR_EACH_PTR_NOTAG(207,6330
+#define FOR_EACH_PTR_REVERSE(209,6389
+#define END_FOR_EACH_PTR_REVERSE(212,6512
+#define FOR_EACH_PTR_REVERSE_NOTAG(215,6620
+#define END_FOR_EACH_PTR_REVERSE_NOTAG(218,6755
+#define THIS_ADDRESS(220,6830
+#define DO_SPLIT(225,6971
+#define DO_INSERT_CURRENT(233,7190
+#define INSERT_CURRENT(247,7634
+#define DO_DELETE_CURRENT(250,7736
+#define DELETE_CURRENT_PTR(261,8085
+#define REPLACE_CURRENT_PTR(264,8181
+#define PACK_PTR_LIST(269,8329
+static inline void update_tag(271,8394
+static inline void *tag_ptr(tag_ptr277,8511
+#define CURRENT_TAG(282,8618
+#define TAG_CURRENT(283,8683
+
+scope.h,77
+#define SCOPE_H2,16
+struct scope 14,230
+static inline int toplevel(26,477
+
+compat.h,44
+#define COMPAT_H2,17
+#define CHUNK 22,539
+
+bitmap.h,295
+#define BITMAP_H2,17
+#define BITS_IN_LONG	4,35
+#define LONGS(5,82
+#define DECLARE_BITMAP(8,178
+static inline int test_bit(10,240
+static inline void set_bit(17,436
+static inline void clear_bit(24,626
+static inline int test_and_set_bit(31,821
+static inline int test_and_clear_bit(41,1116
+
+expression.h,1047
+#define EXPRESSION_H2,21
+enum expression_type 20,360
+	EXPR_VALUE 21,383
+	EXPR_STRING,22,400
+	EXPR_SYMBOL,23,414
+	EXPR_TYPE,24,428
+	EXPR_BINOP,25,440
+	EXPR_ASSIGNMENT,26,453
+	EXPR_LOGICAL,27,471
+	EXPR_DEREF,28,486
+	EXPR_PREOP,29,499
+	EXPR_POSTOP,30,512
+	EXPR_CAST,31,526
+	EXPR_FORCE_CAST,32,538
+	EXPR_IMPLIED_CAST,33,556
+	EXPR_SIZEOF,34,576
+	EXPR_ALIGNOF,35,590
+	EXPR_PTRSIZEOF,36,605
+	EXPR_CONDITIONAL,37,622
+	EXPR_SELECT,38,641
+	EXPR_STATEMENT,39,691
+	EXPR_CALL,40,708
+	EXPR_COMMA,41,720
+	EXPR_COMPARE,42,733
+	EXPR_LABEL,43,748
+	EXPR_INITIALIZER,44,761
+	EXPR_IDENTIFIER,45,800
+	EXPR_INDEX,46,847
+	EXPR_POS,47,885
+	EXPR_FVALUE,48,924
+	EXPR_SLICE,49,938
+	EXPR_OFFSETOF,50,951
+	Int_const_expr 54,978
+	Float_literal 55,999
+	Taint_comma 59,1052
+struct expression 62,1096
+static inline struct expression *alloc_expression(alloc_expression180,4010
+static inline struct expression *alloc_const_expression(alloc_const_expression188,4198
+static inline int lookup_type(201,4538
+#define constant_expression(216,5063
+
+dissect.h,238
+#define	DISSECT_H2,18
+#define	U_SHIFT	8,100
+#define	U_R_AOF	10,120
+#define	U_W_AOF	11,142
+#define	U_R_VAL	13,165
+#define	U_W_VAL	14,187
+#define	U_R_PTR	16,210
+#define	U_W_PTR	17,248
+struct reporter19,287
+#define	MK_IDENT(29,556
+
+token.h,2075
+#define TOKEN_H2,16
+enum constantfile 26,619
+  CONSTANT_FILE_MAYBE,27,639
+  CONSTANT_FILE_IFNDEF,28,719
+  CONSTANT_FILE_NOPE,29,791
+  CONSTANT_FILE_YES 30,823
+struct stream 35,895
+struct ident 53,1295
+enum token_type 63,1594
+	TOKEN_EOF,64,1612
+	TOKEN_ERROR,65,1624
+	TOKEN_IDENT,66,1638
+	TOKEN_ZERO_IDENT,67,1652
+	TOKEN_NUMBER,68,1671
+	TOKEN_CHAR,69,1686
+	TOKEN_WIDE_CHAR,70,1699
+	TOKEN_STRING,71,1717
+	TOKEN_WIDE_STRING,72,1732
+	TOKEN_SPECIAL,73,1752
+	TOKEN_STREAMBEGIN,74,1768
+	TOKEN_STREAMEND,75,1788
+	TOKEN_MACRO_ARGUMENT,76,1806
+	TOKEN_STR_ARGUMENT,77,1829
+	TOKEN_QUOTED_ARGUMENT,78,1850
+	TOKEN_CONCAT,79,1874
+	TOKEN_GNU_KLUDGE,80,1889
+	TOKEN_UNTAINT,81,1908
+	TOKEN_ARG_COUNT,82,1924
+	TOKEN_IF,83,1942
+	TOKEN_SKIP_GROUPS,84,1953
+	TOKEN_ELSE,85,1973
+#define COMBINATION_STRINGS 89,2015
+enum special_token 108,2319
+	SPECIAL_BASE 109,2340
+	SPECIAL_ADD_ASSIGN 110,2361
+	SPECIAL_ADD_ASSIGN = SPECIAL_BASE,110,2361
+	SPECIAL_INCREMENT,111,2397
+	SPECIAL_SUB_ASSIGN,112,2417
+	SPECIAL_DECREMENT,113,2438
+	SPECIAL_DEREFERENCE,114,2458
+	SPECIAL_MUL_ASSIGN,115,2480
+	SPECIAL_DIV_ASSIGN,116,2501
+	SPECIAL_MOD_ASSIGN,117,2522
+	SPECIAL_LTE,118,2543
+	SPECIAL_GTE,119,2557
+	SPECIAL_EQUAL,120,2571
+	SPECIAL_NOTEQUAL,121,2587
+	SPECIAL_LOGICAL_AND,122,2606
+	SPECIAL_AND_ASSIGN,123,2628
+	SPECIAL_LOGICAL_OR,124,2649
+	SPECIAL_OR_ASSIGN,125,2670
+	SPECIAL_XOR_ASSIGN,126,2690
+	SPECIAL_HASHHASH,127,2711
+	SPECIAL_LEFTSHIFT,128,2730
+	SPECIAL_RIGHTSHIFT,129,2750
+	SPECIAL_DOTDOT,130,2771
+	SPECIAL_SHL_ASSIGN,131,2788
+	SPECIAL_SHR_ASSIGN,132,2809
+	SPECIAL_ELLIPSIS,133,2830
+	SPECIAL_ARG_SEPARATOR,134,2849
+	SPECIAL_UNSIGNED_LT,135,2873
+	SPECIAL_UNSIGNED_GT,136,2895
+	SPECIAL_UNSIGNED_LTE,137,2917
+	SPECIAL_UNSIGNED_GTE,138,2940
+struct string 141,2967
+struct argcount 147,3051
+struct token 159,3288
+#define MAX_STRING 173,3513
+static inline struct token *containing_token(containing_token175,3538
+#define token_type(181,3696
+#define eof_token(189,3917
+static inline int match_op(206,4702
+static inline int match_ident(211,4829
+
+ident-list.h,125
+#define IDENT(2,1
+#define IDENT_RESERVED(3,45
+#undef __IDENT114,3511
+#undef IDENT115,3526
+#undef IDENT_RESERVED116,3539
+
+validation/preprocessor/preprocessor20.h,0

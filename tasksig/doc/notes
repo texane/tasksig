@@ -1,0 +1,71 @@
+. task api
+ . gen_prolog
+ . gen_epilog
+ . gen_call
+ . gen_signature
+
+. algorithm
+ . first consider the function has no side effect
+  . capture the function closure (ie. params and local variables)
+  . then, foreach call
+
+ . if a variable is not declared inside the scope, then it is global
+  . include the global variables inside the function context
+
+ . find the root function
+  . put parameters into the tasks.args
+
+  . algorithm 
+   . 
+
+  . foreach arg in task.args
+    . if arg is const { set_read_mode(); continue ; }
+    . if task.args contains only read params, done
+     . // if this true, since global variable may
+       // form a source of task params
+    
+  . foreach function statement
+   . if the statement is a call
+    . if the call args contain at least one alias
+     . traverse the function
+   . if the statement aliases a variable
+    . push the resulting symbol in the watchedlist
+    
+. notes
+ . a function can produce an alias
+  . either with return value
+  . either a pointer is passed in arg
+  . global variable
+
+ . internally, foreach statement, get dependency graph
+
+ . access rules
+  . if the variable is a pointer
+   . setmode(out)
+  . if the variable is a scalar
+   . setmode(input)
+  . if the variable is global
+   . setmode(output)
+
+ . algorithm termination
+  . foreach mode in modes(task.args + task.globals)
+   . if is_read(mode), in
+   . if is_write(mode), out
+   . if neither(in, out), warning('never used')
+
+ . memref
+  struct memref { struct memref* next; memref* top; access; };
+  . get_
+  . create_memref(which);
+  . algo: foreach aff in affectation
+   . if aff alias an existing memref
+   . createnewmemref(memref->top)
+  . enum access_mode get_memref_access_mode(memref* top)
+   . foreach (memref, next)
+
+ . closure
+  . { struct memref}
+
+. reference
+ . http://en.wikipedia.org/wiki/Static_single_assignment_form (abrev ssa in the code)
+ . http://www.spinics.net/lists/gcchelp/msg28682.html (phi node)
