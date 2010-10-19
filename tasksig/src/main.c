@@ -19,8 +19,8 @@
 #define DEBUG_ASSERT(__expr) \
   if (!(__expr)) { printf("!(" #__expr ")\n"); exit(-1); }
 
-#define DEBUG_PRINT(__s) \
-  printf(__s "\n")
+#define DEBUG_PRINTF(__s, ...)	\
+  printf(__s, ##__VA_ARGS__)
 
 
 /* symbol references list
@@ -35,6 +35,20 @@ struct symrefs
 };
 
 DECLARE_PTR_LIST(symrefs_list, struct symrefs);
+
+static inline void init_symrefs(struct symrefs* symrefs)
+{
+  symrefs->top = NULL;
+  symrefs->refs = NULL;
+}
+
+static struct symrefs* new_symrefs(void)
+{
+  struct symrefs* const symrefs = malloc(sizeof(struct symrefs));
+  if (symrefs == NULL) return NULL;
+  init_symrefs(symrefs);
+  return symrefs;
+}
 
 
 /* ast visitor type
@@ -215,29 +229,29 @@ static void visit_statement(struct visitor* viz, struct statement* stmt)
   switch (stmt->type)
   {
   case STMT_EXPRESSION:
-    DEBUG_PRINT("expression");
+    DEBUG_PRINTF("expression ");
     visit_expression(viz, stmt->expression);
     break;
 
   case STMT_DECLARATION:
-    DEBUG_PRINT("decl");
+    DEBUG_PRINTF("decl ");
     /* show_symbol_decl(stmt->declaration); */
     break;
 
   case STMT_RETURN:
-    DEBUG_PRINT("return");
+    DEBUG_PRINTF("return ");
     /* todo: could be return ptr where ptr a memory alias */
     /* return show_return_stmt(stmt); */
     break ;
 
   case STMT_ITERATOR:
-    printf("iterator\n");
+    printf("iterator ");
     visit_statement(viz, stmt->iterator_statement);
     /* todo: show-parse.c */
     break;
 
   case STMT_RANGE:
-    DEBUG_PRINT("range\n");
+    DEBUG_PRINTF("range ");
     /* todo: show-parse.c */
     break;
 
@@ -251,7 +265,7 @@ static void visit_statement(struct visitor* viz, struct statement* stmt)
     }
 
   default:
-    DEBUG_PRINT("unknown_statement\n");
+    DEBUG_PRINTF("unknown_statement %u ", stmt->type);
     break;
   }
 }
@@ -294,10 +308,10 @@ static int visit_root_entrypoint(struct visitor* viz, struct symbol* sym)
   {
     struct symbol* arg;
     FOR_EACH_PTR(sym->arguments, arg) {
-      struct symrefs* const symrefs = malloc(sizeof(struct symrefs));
+      struct symrefs* const symrefs = new_symrefs();
       DEBUG_ASSERT(symrefs);
       symrefs->top = arg;
-      symrefs->refs = NULL;
+      DEBUG_PRINTF("tracking(%s)\n", show_ident(arg->ident));
       add_ptr_list(&viz->symrefs, symrefs);
     } END_FOR_EACH_PTR(arg);
 
