@@ -73,3 +73,5 @@
 . reference
  . http://en.wikipedia.org/wiki/Static_single_assignment_form (abrev ssa in the code)
  . http://www.spinics.net/lists/gcchelp/msg28682.html (phi node)
+ . http://www-users.cs.umn.edu/~jin/
+ . http://www.cs.princeton.edu/~jqwu/Memory/survey.html
